@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: 
-// Generated 2025-08-04T19:31:01
+// Generated 2025-08-04T19:43:32
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -12,7 +12,7 @@ function pano2vrSkin(player,base) {
 	player.addVariable('Map_Pin_active_E', 2, false, { ignoreInState: 0  });
 	player.addVariable('View_option', 2, true, { ignoreInState: 0  });
 	player.addVariable('Floor_Visibility', 2, false, { ignoreInState: 0  });
-	player.addVariable('SlideShow_QG', 1, 0, { ignoreInState: 0  });
+	player.addVariable('SlideShow_QG', 1, 0, { ignoreInState: 1  });
 	player.addVariable('Hotspot_Visibility', 2, false, { ignoreInState: 0  });
 	player.addVariable('contactpanel', 2, false, { ignoreInState: 0  });
 	player.addVariable('floor_indication', 0, "", { ignoreInState: 0 , customProperty: { variableType: 0, propertyType: 0, defaultValue: "" } });
@@ -130,6 +130,38 @@ function pano2vrSkin(player,base) {
 	this.addSkin=function() {
 		var hs='';
 		this.ggCurrentTime=new Date().getTime();
+		me._variable_SlideShow_QG = {};
+		me._variable_SlideShow_QG.ggCurrentLogicState = -1;
+		me._variable_SlideShow_QG.logicBlock = function() {
+			var newLogicState_SlideShow_QG;
+			if (
+				((player.getIsMobile() == true))
+			)
+			{
+				newLogicState_SlideShow_QG = 0;
+			}
+			else if (
+				((player.getIsMobile() == false))
+			)
+			{
+				newLogicState_SlideShow_QG = 1;
+			}
+			else {
+				newLogicState_SlideShow_QG = -1;
+			}
+			if (me._variable_SlideShow_QG.ggCurrentLogicState != newLogicState_SlideShow_QG) {
+				me._variable_SlideShow_QG.ggCurrentLogicState = newLogicState_SlideShow_QG;
+				if (me._variable_SlideShow_QG.ggCurrentLogicState == 0) {
+					player.setVariableValue('SlideShow_QG', 2);
+				}
+				else if (me._variable_SlideShow_QG.ggCurrentLogicState == 1) {
+					player.setVariableValue('SlideShow_QG', 0);
+				}
+				else {
+					player.setVariableValue('SlideShow_QG', 0);
+				}
+			}
+		}
 		el=me._right_top_corner_panel=document.createElement('div');
 		el.ggId="Right top corner panel";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -8619,22 +8651,16 @@ function pano2vrSkin(player,base) {
 		me._mouse_qg.logicBlock_visible = function() {
 			var newLogicStateVisible;
 			if (
-				((player.getIsMobile() == true))
+				((player.getVariableValue('SlideShow_QG') == Number("0")))
 			)
 			{
 				newLogicStateVisible = 0;
 			}
 			else if (
-				((player.getVariableValue('SlideShow_QG') == Number("0")))
+				((player.getVariableValue('SlideShow_QG') != Number("0")))
 			)
 			{
 				newLogicStateVisible = 1;
-			}
-			else if (
-				((player.getViewerSize(true).width != 0))
-			)
-			{
-				newLogicStateVisible = 2;
 			}
 			else {
 				newLogicStateVisible = -1;
@@ -8643,14 +8669,10 @@ function pano2vrSkin(player,base) {
 				me._mouse_qg.ggCurrentLogicStateVisible = newLogicStateVisible;
 				me._mouse_qg.style.transition='width 0s, height 0s';
 				if (me._mouse_qg.ggCurrentLogicStateVisible == 0) {
-					me._mouse_qg.style.visibility="hidden";
-					me._mouse_qg.ggVisible=false;
-				}
-				else if (me._mouse_qg.ggCurrentLogicStateVisible == 1) {
 					me._mouse_qg.style.visibility=(Number(me._mouse_qg.style.opacity)>0||!me._mouse_qg.style.opacity)?'inherit':'hidden';
 					me._mouse_qg.ggVisible=true;
 				}
-				else if (me._mouse_qg.ggCurrentLogicStateVisible == 2) {
+				else if (me._mouse_qg.ggCurrentLogicStateVisible == 1) {
 					me._mouse_qg.style.visibility="hidden";
 					me._mouse_qg.ggVisible=false;
 				}
@@ -12862,6 +12884,7 @@ function pano2vrSkin(player,base) {
 					hotspotTemplates['ht_node'][i].ggEvent_configloaded();
 				}
 			}
+			me._variable_SlideShow_QG.logicBlock();
 			me._right_top_corner_panel.logicBlock_visible();
 			for (var i=0; i < me._mini_map.ggMarkerInstances.length; i++) {
 				me._mini_map.ggMarkerInstances[i].ggEvent_configloaded();
@@ -12946,7 +12969,6 @@ function pano2vrSkin(player,base) {
 			}
 		});
 		player.addListener('sizechanged', function(event) {
-			me._mouse_qg.logicBlock_visible();
 			me._right_01.logicBlock_visible();
 		});
 		player.addListener('varchanged_Floor_Visibility', function(event) {
