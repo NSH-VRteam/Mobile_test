@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: 
-// Generated 2025-08-04T18:11:38
+// Generated 2025-08-04T19:31:01
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -8619,16 +8619,22 @@ function pano2vrSkin(player,base) {
 		me._mouse_qg.logicBlock_visible = function() {
 			var newLogicStateVisible;
 			if (
-				((player.getVariableValue('SlideShow_QG') == Number("0")))
+				((player.getIsMobile() == true))
 			)
 			{
 				newLogicStateVisible = 0;
 			}
 			else if (
-				((player.getViewerSize(true).width != 0))
+				((player.getVariableValue('SlideShow_QG') == Number("0")))
 			)
 			{
 				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getViewerSize(true).width != 0))
+			)
+			{
+				newLogicStateVisible = 2;
 			}
 			else {
 				newLogicStateVisible = -1;
@@ -8637,10 +8643,14 @@ function pano2vrSkin(player,base) {
 				me._mouse_qg.ggCurrentLogicStateVisible = newLogicStateVisible;
 				me._mouse_qg.style.transition='width 0s, height 0s';
 				if (me._mouse_qg.ggCurrentLogicStateVisible == 0) {
+					me._mouse_qg.style.visibility="hidden";
+					me._mouse_qg.ggVisible=false;
+				}
+				else if (me._mouse_qg.ggCurrentLogicStateVisible == 1) {
 					me._mouse_qg.style.visibility=(Number(me._mouse_qg.style.opacity)>0||!me._mouse_qg.style.opacity)?'inherit':'hidden';
 					me._mouse_qg.ggVisible=true;
 				}
-				else if (me._mouse_qg.ggCurrentLogicStateVisible == 1) {
+				else if (me._mouse_qg.ggCurrentLogicStateVisible == 2) {
 					me._mouse_qg.style.visibility="hidden";
 					me._mouse_qg.ggVisible=false;
 				}
@@ -8869,16 +8879,22 @@ function pano2vrSkin(player,base) {
 		me._mobile_qg.logicBlock_visible = function() {
 			var newLogicStateVisible;
 			if (
-				((player.getVariableValue('SlideShow_QG') == Number("2")))
+				((player.getIsMobile() == true))
 			)
 			{
 				newLogicStateVisible = 0;
 			}
 			else if (
-				((player.getVariableValue('SlideShow_QG') != Number("2")))
+				((player.getVariableValue('SlideShow_QG') == Number("2")))
 			)
 			{
 				newLogicStateVisible = 1;
+			}
+			else if (
+				((player.getVariableValue('SlideShow_QG') != Number("2")))
+			)
+			{
+				newLogicStateVisible = 2;
 			}
 			else {
 				newLogicStateVisible = -1;
@@ -8891,6 +8907,10 @@ function pano2vrSkin(player,base) {
 					me._mobile_qg.ggVisible=true;
 				}
 				else if (me._mobile_qg.ggCurrentLogicStateVisible == 1) {
+					me._mobile_qg.style.visibility=(Number(me._mobile_qg.style.opacity)>0||!me._mobile_qg.style.opacity)?'inherit':'hidden';
+					me._mobile_qg.ggVisible=true;
+				}
+				else if (me._mobile_qg.ggCurrentLogicStateVisible == 2) {
 					me._mobile_qg.style.visibility="hidden";
 					me._mobile_qg.ggVisible=false;
 				}
