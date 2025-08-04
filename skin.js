@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: 
-// Generated 2025-08-04T19:43:32
+// Generated 2025-08-04T19:50:37
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -8579,7 +8579,7 @@ function pano2vrSkin(player,base) {
 		el.ggDx=0;
 		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=true;
+		el.ggVisible=false;
 		el.className="ggskin ggskin_image ";
 		el.ggType='image';
 		hs ='';
@@ -8587,7 +8587,7 @@ function pano2vrSkin(player,base) {
 		hs+='left : calc(50% - ((1400px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
 		hs+='top : calc(50% - ((700px + 0px) / 2) + 0px);';
-		hs+='visibility : inherit;';
+		hs+='visibility : hidden;';
 		hs+='width : 1400px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
@@ -8677,8 +8677,8 @@ function pano2vrSkin(player,base) {
 					me._mouse_qg.ggVisible=false;
 				}
 				else {
-					me._mouse_qg.style.visibility=(Number(me._mouse_qg.style.opacity)>0||!me._mouse_qg.style.opacity)?'inherit':'hidden';
-					me._mouse_qg.ggVisible=true;
+					me._mouse_qg.style.visibility="hidden";
+					me._mouse_qg.ggVisible=false;
 				}
 			}
 		}
