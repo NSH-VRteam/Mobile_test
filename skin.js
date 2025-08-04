@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
-// Filename: NSH-UI New button style.ggsk
-// Generated 2025-08-04T17:46:54
+// Filename: 
+// Generated 2025-08-04T18:02:55
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -16,7 +16,6 @@ function pano2vrSkin(player,base) {
 	player.addVariable('Hotspot_Visibility', 2, false, { ignoreInState: 0  });
 	player.addVariable('contactpanel', 2, false, { ignoreInState: 0  });
 	player.addVariable('floor_indication', 0, "", { ignoreInState: 0 , customProperty: { variableType: 0, propertyType: 0, defaultValue: "" } });
-	player.addVariable('Mobile', 2, false, { ignoreInState: 1  });
 	var me=this;
 	var skin=this;
 	var flag=false;
@@ -131,38 +130,6 @@ function pano2vrSkin(player,base) {
 	this.addSkin=function() {
 		var hs='';
 		this.ggCurrentTime=new Date().getTime();
-		me._variable_Mobile = {};
-		me._variable_Mobile.ggCurrentLogicState = -1;
-		me._variable_Mobile.logicBlock = function() {
-			var newLogicState_Mobile;
-			if (
-				((player.getIsMobile() == true))
-			)
-			{
-				newLogicState_Mobile = 0;
-			}
-			else if (
-				((player.getIsMobile() == false))
-			)
-			{
-				newLogicState_Mobile = 1;
-			}
-			else {
-				newLogicState_Mobile = -1;
-			}
-			if (me._variable_Mobile.ggCurrentLogicState != newLogicState_Mobile) {
-				me._variable_Mobile.ggCurrentLogicState = newLogicState_Mobile;
-				if (me._variable_Mobile.ggCurrentLogicState == 0) {
-					player.setVariableValue('Mobile', true);
-				}
-				else if (me._variable_Mobile.ggCurrentLogicState == 1) {
-					player.setVariableValue('Mobile', false);
-				}
-				else {
-					player.setVariableValue('Mobile', false);
-				}
-			}
-		}
 		el=me._right_top_corner_panel=document.createElement('div');
 		el.ggId="Right top corner panel";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -12168,13 +12135,13 @@ function pano2vrSkin(player,base) {
 		me._rectangle_1.logicBlock_backgroundcolor = function() {
 			var newLogicStateBackgroundColor;
 			if (
-				((player.getVariableValue('Mobile') == true))
+				((player.getIsMobile() == true))
 			)
 			{
 				newLogicStateBackgroundColor = 0;
 			}
 			else if (
-				((player.getVariableValue('Mobile') == false))
+				((player.getIsMobile() == false))
 			)
 			{
 				newLogicStateBackgroundColor = 1;
@@ -12713,7 +12680,6 @@ function pano2vrSkin(player,base) {
 			me.__1st_floornames.logicBlock_visible();
 			me.__2nd_floornames.logicBlock_visible();
 			me.__3rd_floornames.logicBlock_visible();
-			me._rectangle_1.logicBlock_backgroundcolor();
 		});
 		player.addListener('configloaded', function(event) {
 			if (hotspotTemplates.hasOwnProperty('ht_node_90')) {
@@ -12741,7 +12707,6 @@ function pano2vrSkin(player,base) {
 					hotspotTemplates['ht_node'][i].ggEvent_configloaded();
 				}
 			}
-			me._variable_Mobile.logicBlock();
 			me._right_top_corner_panel.logicBlock_visible();
 			for (var i=0; i < me._mini_map.ggMarkerInstances.length; i++) {
 				me._mini_map.ggMarkerInstances[i].ggEvent_configloaded();
@@ -12878,9 +12843,6 @@ function pano2vrSkin(player,base) {
 			for (var i=0; i < me._floorplans.ggMarkerInstances.length; i++) {
 				me._floorplans.ggMarkerInstances[i].ggEvent_varchanged_Map_Pin_active_E();
 			}
-		});
-		player.addListener('varchanged_Mobile', function(event) {
-			me._rectangle_1.logicBlock_backgroundcolor();
 		});
 		player.addListener('varchanged_Room_visibility_1F', function(event) {
 			me._scrollarea_1f.logicBlock_position();
