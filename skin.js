@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: 
-// Generated 2025-08-05T20:31:48
+// Generated 2025-08-05T20:47:04
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -139,16 +139,14 @@ function pano2vrSkin(player,base) {
 			var newLogicState_Mobile;
 			if (
 				((player.getIsMobile() == true)) && 
-				((player.getViewerSize(true).width < 550)) && 
-				((player.getViewerSize(true).width / player.getViewerSize(true).height < 1))
+				((player.getViewerSize(true).width < 680))
 			)
 			{
 				newLogicState_Mobile = 0;
 			}
 			else if (
 				((player.getIsMobile() == false)) && 
-				((player.getViewerSize(true).width > 550)) && 
-				((player.getViewerSize(true).width / player.getViewerSize(true).height > 1))
+				((player.getViewerSize(true).width > 680))
 			)
 			{
 				newLogicState_Mobile = 1;
@@ -175,16 +173,14 @@ function pano2vrSkin(player,base) {
 			var newLogicState_Tablet;
 			if (
 				((player.getIsMobile() == true)) && 
-				((player.getViewerSize(true).width > 550)) && 
-				((player.getViewerSize(true).width / player.getViewerSize(true).height < 1))
+				((player.getViewerSize(true).width > 680))
 			)
 			{
 				newLogicState_Tablet = 0;
 			}
 			else if (
 				((player.getIsMobile() == false)) && 
-				((player.getViewerSize(true).width < 550)) && 
-				((player.getViewerSize(true).width / player.getViewerSize(true).height > 1))
+				((player.getViewerSize(true).width < 680))
 			)
 			{
 				newLogicState_Tablet = 1;
