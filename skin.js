@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: NSH-UI New button style.ggsk
-// Generated 2025-08-05T19:19:44
+// Generated 2025-08-05T20:22:44
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -139,14 +139,16 @@ function pano2vrSkin(player,base) {
 			var newLogicState_Mobile;
 			if (
 				((player.getIsMobile() == true)) && 
-				((player.getViewerSize(true).width < 767))
+				((player.getViewerSize(true).width < 700)) && 
+				((player.getViewerSize(true).width / player.getViewerSize(true).height < 1))
 			)
 			{
 				newLogicState_Mobile = 0;
 			}
 			else if (
 				((player.getIsMobile() == false)) && 
-				((player.getViewerSize(true).width > 767))
+				((player.getViewerSize(true).width > 700)) && 
+				((player.getViewerSize(true).width / player.getViewerSize(true).height > 1))
 			)
 			{
 				newLogicState_Mobile = 1;
@@ -173,14 +175,16 @@ function pano2vrSkin(player,base) {
 			var newLogicState_Tablet;
 			if (
 				((player.getIsMobile() == true)) && 
-				((player.getViewerSize(true).width > 767))
+				((player.getViewerSize(true).width > 700)) && 
+				((player.getViewerSize(true).width / player.getViewerSize(true).height < 1))
 			)
 			{
 				newLogicState_Tablet = 0;
 			}
 			else if (
 				((player.getIsMobile() == false)) && 
-				((player.getViewerSize(true).width < 767))
+				((player.getViewerSize(true).width < 700)) && 
+				((player.getViewerSize(true).width / player.getViewerSize(true).height > 1))
 			)
 			{
 				newLogicState_Tablet = 1;
@@ -13454,7 +13458,7 @@ function pano2vrSkin(player,base) {
 		els.setAttribute('style',hs);
 		me._text_1.ggUpdateText=function() {
 			var params = [];
-			var hs = player._("\"404 \u2013 Even legends take a wrong turn sometimes.\"", params);
+			var hs = player._("\"404 \u2013 Even legends take a wrong turn  sometimes.\"", params);
 			if (hs!=this.ggText) {
 				this.ggText=hs;
 				this.ggTextDiv.innerHTML=hs;
@@ -13553,7 +13557,7 @@ function pano2vrSkin(player,base) {
 					if (me._text_1.ggUpdateText) {
 					me._text_1.ggUpdateText=function() {
 						var params = [];
-						var hs = player._("\"404 \u2013 Even legends take a wrong turn sometimes.\"", params);
+						var hs = player._("\"404 \u2013 Even legends take a wrong turn  sometimes.\"", params);
 						if (hs!=this.ggText) {
 							this.ggText=hs;
 							this.ggTextDiv.innerHTML=hs;
