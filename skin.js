@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
-// Filename: NSH-UI New button style.ggsk
-// Generated 2025-08-05T20:55:44
+// Filename: 
+// Generated 2025-08-07T17:07:00
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -16,9 +16,13 @@ function pano2vrSkin(player,base) {
 	player.addVariable('Hotspot_Visibility', 2, false, { ignoreInState: 0  });
 	player.addVariable('contactpanel', 2, false, { ignoreInState: 0  });
 	player.addVariable('floor_indication', 0, "", { ignoreInState: 0 , customProperty: { variableType: 0, propertyType: 0, defaultValue: "" } });
-	player.addVariable('Mobile', 2, false, { ignoreInState: 1  });
-	player.addVariable('Tablet', 2, false, { ignoreInState: 1  });
-	player.addVariable('Desktop', 2, false, { ignoreInState: 1  });
+	player.addVariable('Mobile_P', 2, false, { ignoreInState: 1  });
+	player.addVariable('Mobile_L', 2, false, { ignoreInState: 1  });
+	player.addVariable('Tablet_P', 2, false, { ignoreInState: 1  });
+	player.addVariable('Tablet_L', 2, false, { ignoreInState: 1  });
+	player.addVariable('Desktop_L', 2, false, { ignoreInState: 1  });
+	player.addVariable('Portrait', 2, false, { ignoreInState: 1  });
+	player.addVariable('FullScreen', 2, false, { ignoreInState: 1  });
 	var me=this;
 	var skin=this;
 	var flag=false;
@@ -133,105 +137,243 @@ function pano2vrSkin(player,base) {
 	this.addSkin=function() {
 		var hs='';
 		this.ggCurrentTime=new Date().getTime();
-		me._variable_Mobile = {};
-		me._variable_Mobile.ggCurrentLogicState = -1;
-		me._variable_Mobile.logicBlock = function() {
-			var newLogicState_Mobile;
+		me._variable_Mobile_P = {};
+		me._variable_Mobile_P.ggCurrentLogicState = -1;
+		me._variable_Mobile_P.logicBlock = function() {
+			var newLogicState_Mobile_P;
 			if (
 				((player.getIsMobile() == true)) && 
-				((player.getViewerSize(true).width < 680))
+				((player.getViewerSize(true).width < 680)) && 
+				((player.getVariableValue('Portrait') == true))
 			)
 			{
-				newLogicState_Mobile = 0;
+				newLogicState_Mobile_P = 0;
 			}
 			else if (
 				((player.getIsMobile() == false)) && 
-				((player.getViewerSize(true).width > 680))
+				((player.getViewerSize(true).width > 680)) && 
+				((player.getVariableValue('Portrait') == false))
 			)
 			{
-				newLogicState_Mobile = 1;
+				newLogicState_Mobile_P = 1;
 			}
 			else {
-				newLogicState_Mobile = -1;
+				newLogicState_Mobile_P = -1;
 			}
-			if (me._variable_Mobile.ggCurrentLogicState != newLogicState_Mobile) {
-				me._variable_Mobile.ggCurrentLogicState = newLogicState_Mobile;
-				if (me._variable_Mobile.ggCurrentLogicState == 0) {
-					player.setVariableValue('Mobile', true);
+			if (me._variable_Mobile_P.ggCurrentLogicState != newLogicState_Mobile_P) {
+				me._variable_Mobile_P.ggCurrentLogicState = newLogicState_Mobile_P;
+				if (me._variable_Mobile_P.ggCurrentLogicState == 0) {
+					player.setVariableValue('Mobile_P', true);
 				}
-				else if (me._variable_Mobile.ggCurrentLogicState == 1) {
-					player.setVariableValue('Mobile', false);
+				else if (me._variable_Mobile_P.ggCurrentLogicState == 1) {
+					player.setVariableValue('Mobile_P', false);
 				}
 				else {
-					player.setVariableValue('Mobile', false);
+					player.setVariableValue('Mobile_P', false);
 				}
 			}
 		}
-		me._variable_Tablet = {};
-		me._variable_Tablet.ggCurrentLogicState = -1;
-		me._variable_Tablet.logicBlock = function() {
-			var newLogicState_Tablet;
+		me._variable_Mobile_L = {};
+		me._variable_Mobile_L.ggCurrentLogicState = -1;
+		me._variable_Mobile_L.logicBlock = function() {
+			var newLogicState_Mobile_L;
 			if (
 				((player.getIsMobile() == true)) && 
-				((player.getViewerSize(true).width > 680))
+				((player.getViewerSize(true).height < 680)) && 
+				((player.getVariableValue('Portrait') == false))
 			)
 			{
-				newLogicState_Tablet = 0;
+				newLogicState_Mobile_L = 0;
 			}
 			else if (
 				((player.getIsMobile() == false)) && 
-				((player.getViewerSize(true).width < 680))
+				((player.getViewerSize(true).height > 680)) && 
+				((player.getVariableValue('Portrait') == true))
 			)
 			{
-				newLogicState_Tablet = 1;
+				newLogicState_Mobile_L = 1;
 			}
 			else {
-				newLogicState_Tablet = -1;
+				newLogicState_Mobile_L = -1;
 			}
-			if (me._variable_Tablet.ggCurrentLogicState != newLogicState_Tablet) {
-				me._variable_Tablet.ggCurrentLogicState = newLogicState_Tablet;
-				if (me._variable_Tablet.ggCurrentLogicState == 0) {
-					player.setVariableValue('Tablet', true);
+			if (me._variable_Mobile_L.ggCurrentLogicState != newLogicState_Mobile_L) {
+				me._variable_Mobile_L.ggCurrentLogicState = newLogicState_Mobile_L;
+				if (me._variable_Mobile_L.ggCurrentLogicState == 0) {
+					player.setVariableValue('Mobile_L', true);
 				}
-				else if (me._variable_Tablet.ggCurrentLogicState == 1) {
-					player.setVariableValue('Tablet', false);
+				else if (me._variable_Mobile_L.ggCurrentLogicState == 1) {
+					player.setVariableValue('Mobile_L', false);
 				}
 				else {
-					player.setVariableValue('Tablet', false);
+					player.setVariableValue('Mobile_L', false);
 				}
 			}
 		}
-		me._variable_Desktop = {};
-		me._variable_Desktop.ggCurrentLogicState = -1;
-		me._variable_Desktop.logicBlock = function() {
-			var newLogicState_Desktop;
+		me._variable_Tablet_P = {};
+		me._variable_Tablet_P.ggCurrentLogicState = -1;
+		me._variable_Tablet_P.logicBlock = function() {
+			var newLogicState_Tablet_P;
 			if (
-				((player.getIsMobile() == false)) && 
-				((player.getViewerSize(true).width >= 1024))
+				((player.getIsMobile() == true)) && 
+				((player.getViewerSize(true).width > 680)) && 
+				((player.getVariableValue('Portrait') == true))
 			)
 			{
-				newLogicState_Desktop = 0;
+				newLogicState_Tablet_P = 0;
 			}
 			else if (
-				((player.getIsMobile() == true)) && 
-				((player.getViewerSize(true).width < 1024))
+				((player.getIsMobile() == false)) && 
+				((player.getViewerSize(true).width < 680)) && 
+				((player.getVariableValue('Portrait') == false))
 			)
 			{
-				newLogicState_Desktop = 1;
+				newLogicState_Tablet_P = 1;
 			}
 			else {
-				newLogicState_Desktop = -1;
+				newLogicState_Tablet_P = -1;
 			}
-			if (me._variable_Desktop.ggCurrentLogicState != newLogicState_Desktop) {
-				me._variable_Desktop.ggCurrentLogicState = newLogicState_Desktop;
-				if (me._variable_Desktop.ggCurrentLogicState == 0) {
-					player.setVariableValue('Desktop', true);
+			if (me._variable_Tablet_P.ggCurrentLogicState != newLogicState_Tablet_P) {
+				me._variable_Tablet_P.ggCurrentLogicState = newLogicState_Tablet_P;
+				if (me._variable_Tablet_P.ggCurrentLogicState == 0) {
+					player.setVariableValue('Tablet_P', true);
 				}
-				else if (me._variable_Desktop.ggCurrentLogicState == 1) {
-					player.setVariableValue('Desktop', false);
+				else if (me._variable_Tablet_P.ggCurrentLogicState == 1) {
+					player.setVariableValue('Tablet_P', false);
 				}
 				else {
-					player.setVariableValue('Desktop', false);
+					player.setVariableValue('Tablet_P', false);
+				}
+			}
+		}
+		me._variable_Tablet_L = {};
+		me._variable_Tablet_L.ggCurrentLogicState = -1;
+		me._variable_Tablet_L.logicBlock = function() {
+			var newLogicState_Tablet_L;
+			if (
+				((player.getIsMobile() == true)) && 
+				((player.getViewerSize(true).height > 680)) && 
+				((player.getVariableValue('Portrait') == false))
+			)
+			{
+				newLogicState_Tablet_L = 0;
+			}
+			else if (
+				((player.getIsMobile() == false)) && 
+				((player.getViewerSize(true).height < 680)) && 
+				((player.getVariableValue('Portrait') == true))
+			)
+			{
+				newLogicState_Tablet_L = 1;
+			}
+			else {
+				newLogicState_Tablet_L = -1;
+			}
+			if (me._variable_Tablet_L.ggCurrentLogicState != newLogicState_Tablet_L) {
+				me._variable_Tablet_L.ggCurrentLogicState = newLogicState_Tablet_L;
+				if (me._variable_Tablet_L.ggCurrentLogicState == 0) {
+					player.setVariableValue('Tablet_L', true);
+				}
+				else if (me._variable_Tablet_L.ggCurrentLogicState == 1) {
+					player.setVariableValue('Tablet_L', false);
+				}
+				else {
+					player.setVariableValue('Tablet_L', false);
+				}
+			}
+		}
+		me._variable_Desktop_L = {};
+		me._variable_Desktop_L.ggCurrentLogicState = -1;
+		me._variable_Desktop_L.logicBlock = function() {
+			var newLogicState_Desktop_L;
+			if (
+				((player.getIsMobile() == false))
+			)
+			{
+				newLogicState_Desktop_L = 0;
+			}
+			else if (
+				((player.getIsMobile() == true))
+			)
+			{
+				newLogicState_Desktop_L = 1;
+			}
+			else {
+				newLogicState_Desktop_L = -1;
+			}
+			if (me._variable_Desktop_L.ggCurrentLogicState != newLogicState_Desktop_L) {
+				me._variable_Desktop_L.ggCurrentLogicState = newLogicState_Desktop_L;
+				if (me._variable_Desktop_L.ggCurrentLogicState == 0) {
+					player.setVariableValue('Desktop_L', true);
+				}
+				else if (me._variable_Desktop_L.ggCurrentLogicState == 1) {
+					player.setVariableValue('Desktop_L', false);
+				}
+				else {
+					player.setVariableValue('Desktop_L', false);
+				}
+			}
+		}
+		me._variable_Portrait = {};
+		me._variable_Portrait.ggCurrentLogicState = -1;
+		me._variable_Portrait.logicBlock = function() {
+			var newLogicState_Portrait;
+			if (
+				((player.getViewerSize(true).width / player.getViewerSize(true).height < 1))
+			)
+			{
+				newLogicState_Portrait = 0;
+			}
+			else if (
+				((player.getViewerSize(true).width / player.getViewerSize(true).height > 1))
+			)
+			{
+				newLogicState_Portrait = 1;
+			}
+			else {
+				newLogicState_Portrait = -1;
+			}
+			if (me._variable_Portrait.ggCurrentLogicState != newLogicState_Portrait) {
+				me._variable_Portrait.ggCurrentLogicState = newLogicState_Portrait;
+				if (me._variable_Portrait.ggCurrentLogicState == 0) {
+					player.setVariableValue('Portrait', true);
+				}
+				else if (me._variable_Portrait.ggCurrentLogicState == 1) {
+					player.setVariableValue('Portrait', false);
+				}
+				else {
+					player.setVariableValue('Portrait', false);
+				}
+			}
+		}
+		me._variable_FullScreen = {};
+		me._variable_FullScreen.ggCurrentLogicState = -1;
+		me._variable_FullScreen.logicBlock = function() {
+			var newLogicState_FullScreen;
+			if (
+				((player.getVariableValue('Mobile_L') == true))
+			)
+			{
+				newLogicState_FullScreen = 0;
+			}
+			else if (
+				((player.getVariableValue('Mobile_L') == false))
+			)
+			{
+				newLogicState_FullScreen = 1;
+			}
+			else {
+				newLogicState_FullScreen = -1;
+			}
+			if (me._variable_FullScreen.ggCurrentLogicState != newLogicState_FullScreen) {
+				me._variable_FullScreen.ggCurrentLogicState = newLogicState_FullScreen;
+				if (me._variable_FullScreen.ggCurrentLogicState == 0) {
+					player.setVariableValue('FullScreen', true);
+				}
+				else if (me._variable_FullScreen.ggCurrentLogicState == 1) {
+					player.setVariableValue('FullScreen', false);
+				}
+				else {
+					player.setVariableValue('FullScreen', false);
 				}
 			}
 		}
@@ -5836,6 +5978,41 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
+		me._fullscreen_off_b.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getVariableValue('FullScreen') == false))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getVariableValue('FullScreen') == true))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._fullscreen_off_b.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._fullscreen_off_b.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._fullscreen_off_b.style.transition='';
+				if (me._fullscreen_off_b.ggCurrentLogicStateVisible == 0) {
+					me._fullscreen_off_b.style.visibility="hidden";
+					me._fullscreen_off_b.ggVisible=false;
+				}
+				else if (me._fullscreen_off_b.ggCurrentLogicStateVisible == 1) {
+					me._fullscreen_off_b.style.visibility=(Number(me._fullscreen_off_b.style.opacity)>0||!me._fullscreen_off_b.style.opacity)?'inherit':'hidden';
+					me._fullscreen_off_b.ggVisible=true;
+				}
+				else {
+					me._fullscreen_off_b.style.visibility="hidden";
+					me._fullscreen_off_b.ggVisible=false;
+				}
+			}
+		}
+		me._fullscreen_off_b.logicBlock_visible();
 		me._fullscreen_off_b.onclick=function (e) {
 			me._fullscreen_off_b.style.transition='none';
 			me._fullscreen_off_b.style.visibility='hidden';
@@ -6063,6 +6240,41 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
+		me._fullscreen_b.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getVariableValue('FullScreen') == false))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getVariableValue('FullScreen') == true))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._fullscreen_b.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._fullscreen_b.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._fullscreen_b.style.transition='';
+				if (me._fullscreen_b.ggCurrentLogicStateVisible == 0) {
+					me._fullscreen_b.style.visibility=(Number(me._fullscreen_b.style.opacity)>0||!me._fullscreen_b.style.opacity)?'inherit':'hidden';
+					me._fullscreen_b.ggVisible=true;
+				}
+				else if (me._fullscreen_b.ggCurrentLogicStateVisible == 1) {
+					me._fullscreen_b.style.visibility="hidden";
+					me._fullscreen_b.ggVisible=false;
+				}
+				else {
+					me._fullscreen_b.style.visibility=(Number(me._fullscreen_b.style.opacity)>0||!me._fullscreen_b.style.opacity)?'inherit':'hidden';
+					me._fullscreen_b.ggVisible=true;
+				}
+			}
+		}
+		me._fullscreen_b.logicBlock_visible();
 		me._fullscreen_b.onclick=function (e) {
 			player.enterFullscreen();
 			me._fullscreen_b.style.transition='none';
@@ -13375,19 +13587,21 @@ function pano2vrSkin(player,base) {
 		me._rectangle_1.logicBlock_backgroundcolor = function() {
 			var newLogicStateBackgroundColor;
 			if (
-				((player.getVariableValue('Mobile') == true))
+				((player.getVariableValue('Mobile_P') == true)) || 
+				((player.getVariableValue('Mobile_L') == true))
 			)
 			{
 				newLogicStateBackgroundColor = 0;
 			}
 			else if (
-				((player.getVariableValue('Tablet') == true))
+				((player.getVariableValue('Tablet_P') == true)) || 
+				((player.getVariableValue('Tablet_L') == true))
 			)
 			{
 				newLogicStateBackgroundColor = 1;
 			}
 			else if (
-				((player.getVariableValue('Desktop') == true))
+				((player.getVariableValue('Desktop_L') == true))
 			)
 			{
 				newLogicStateBackgroundColor = 2;
@@ -13478,19 +13692,21 @@ function pano2vrSkin(player,base) {
 		me._text_1.logicBlock_text = function() {
 			var newLogicStateText;
 			if (
-				((player.getVariableValue('Mobile') == true))
+				((player.getVariableValue('Mobile_P') == true)) || 
+				((player.getVariableValue('Mobile_L') == true))
 			)
 			{
 				newLogicStateText = 0;
 			}
 			else if (
-				((player.getVariableValue('Tablet') == true))
+				((player.getVariableValue('Tablet_P') == true)) || 
+				((player.getVariableValue('Tablet_L') == true))
 			)
 			{
 				newLogicStateText = 1;
 			}
 			else if (
-				((player.getVariableValue('Desktop') == true))
+				((player.getVariableValue('Desktop_L') == true))
 			)
 			{
 				newLogicStateText = 2;
@@ -13570,6 +13786,139 @@ function pano2vrSkin(player,base) {
 		me._text_1.logicBlock_text();
 		me._text_1.ggUpdatePosition=function (useTransition) {
 		}
+		el=me._text_1_1=document.createElement('div');
+		els=me._text_1_1__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Text 1_1";
+		el.ggDx=-1;
+		el.ggDy=-1;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='border : 1px solid #000000;';
+		hs+='color : rgba(0,0,0,1);';
+		hs+='height : 200px;';
+		hs+='left : calc(50% - ((500px + 2px) / 2) - 1px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((200px + 2px) / 2) - 1px);';
+		hs+='visibility : inherit;';
+		hs+='width : 500px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		hs ='';
+		hs += 'box-sizing: border-box;';
+		hs+='width: 100%;';
+		hs+='height: auto;';
+		hs+='max-height: 100%;';
+		hs+='text-align: center;';
+		hs+='position: absolute;';
+		hs+='bottom: 0px;';
+		hs+='white-space: pre;';
+		hs+='padding: 0px 0px 30px 0px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._text_1_1.ggUpdateText=function() {
+			var params = [];
+			var hs = player._("\"Rotate Your screen\"", params);
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._text_1_1.ggUpdateText();
+		el.appendChild(els);
+		me._text_1_1.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._text_1_1.logicBlock_text = function() {
+			var newLogicStateText;
+			if (
+				((player.getVariableValue('Portrait') == true))
+			)
+			{
+				newLogicStateText = 0;
+			}
+			else if (
+				((player.getVariableValue('Portrait') == false))
+			)
+			{
+				newLogicStateText = 1;
+			}
+			else {
+				newLogicStateText = -1;
+			}
+			if (me._text_1_1.ggCurrentLogicStateText != newLogicStateText) {
+				me._text_1_1.ggCurrentLogicStateText = newLogicStateText;
+				me._text_1_1.style.transition='';
+				if (me._text_1_1.ggCurrentLogicStateText == 0) {
+					if (me._text_1_1.ggUpdateText) {
+					me._text_1_1.ggUpdateText=function() {
+						var params = [];
+						var hs = player._("Portrait", params);
+						if (hs!=this.ggText) {
+							this.ggText=hs;
+							this.ggTextDiv.innerHTML=hs;
+							if (this.ggUpdatePosition) this.ggUpdatePosition();
+						}
+					}
+					me._text_1_1.ggUpdateText();
+					} else {
+						if (me._text_1_1.ggUpdatePosition) me._text_1_1.ggUpdatePosition();
+					}
+				}
+				else if (me._text_1_1.ggCurrentLogicStateText == 1) {
+					if (me._text_1_1.ggUpdateText) {
+					me._text_1_1.ggUpdateText=function() {
+						var params = [];
+						var hs = player._("Landscape", params);
+						if (hs!=this.ggText) {
+							this.ggText=hs;
+							this.ggTextDiv.innerHTML=hs;
+							if (this.ggUpdatePosition) this.ggUpdatePosition();
+						}
+					}
+					me._text_1_1.ggUpdateText();
+					} else {
+						if (me._text_1_1.ggUpdatePosition) me._text_1_1.ggUpdatePosition();
+					}
+				}
+				else {
+					if (me._text_1_1.ggUpdateText) {
+					me._text_1_1.ggUpdateText=function() {
+						var params = [];
+						var hs = player._("\"Rotate Your screen\"", params);
+						if (hs!=this.ggText) {
+							this.ggText=hs;
+							this.ggTextDiv.innerHTML=hs;
+							if (this.ggUpdatePosition) this.ggUpdatePosition();
+						}
+					}
+					me._text_1_1.ggUpdateText();
+					} else {
+						if (me._text_1_1.ggUpdatePosition) me._text_1_1.ggUpdatePosition();
+					}
+				}
+			}
+		}
+		me._text_1_1.logicBlock_text();
+		me._text_1_1.ggUpdatePosition=function (useTransition) {
+		}
+		me._text_1.appendChild(me._text_1_1);
 		me._rectangle_1.appendChild(me._text_1);
 		me.divSkin.appendChild(me._rectangle_1);
 		me._right_top_corner_panel.logicBlock_visible();
@@ -13761,9 +14110,11 @@ function pano2vrSkin(player,base) {
 		me._floors_blur_bg.logicBlock_alpha();
 		me._rooms_blur_bg.logicBlock_position();
 		me._rooms_blur_bg.logicBlock_alpha();
+		me._fullscreen_off_b.logicBlock_visible();
 		me.elementMouseOver['fullscreen_off_b']=false;
 		me._exit_fullscreen_h.logicBlock_visible();
 		me._exit_fullscreen_h.logicBlock_alpha();
+		me._fullscreen_b.logicBlock_visible();
 		me.elementMouseOver['fullscreen_b']=false;
 		me._fullscreen_h.logicBlock_visible();
 		me._fullscreen_h.logicBlock_alpha();
@@ -13956,6 +14307,7 @@ function pano2vrSkin(player,base) {
 		me.__3rd_floornames.logicBlock_visible();
 		me._rectangle_1.logicBlock_backgroundcolor();
 		me._text_1.logicBlock_text();
+		me._text_1_1.logicBlock_text();
 		player.addListener('changenode', function(event) {
 			if (hotspotTemplates.hasOwnProperty('ht_node_90')) {
 				for(var i = 0; i < hotspotTemplates['ht_node_90'].length; i++) {
@@ -13982,6 +14334,11 @@ function pano2vrSkin(player,base) {
 					hotspotTemplates['ht_node'][i].ggEvent_changenode();
 				}
 			}
+			me._variable_Mobile_P.logicBlock();
+			me._variable_Mobile_L.logicBlock();
+			me._variable_Tablet_P.logicBlock();
+			me._variable_Tablet_L.logicBlock();
+			me._variable_FullScreen.logicBlock();
 			me._right_top_corner_panel.logicBlock_visible();
 			me._right_top_corner_panel.logicBlock_alpha();
 			for (var i=0; i < me._mini_map.ggMarkerInstances.length; i++) {
@@ -14044,7 +14401,9 @@ function pano2vrSkin(player,base) {
 			me._floors_blur_bg.logicBlock_alpha();
 			me._rooms_blur_bg.logicBlock_position();
 			me._rooms_blur_bg.logicBlock_alpha();
+			me._fullscreen_off_b.logicBlock_visible();
 			me._exit_fullscreen_h.logicBlock_visible();
+			me._fullscreen_b.logicBlock_visible();
 			me._fullscreen_h.logicBlock_visible();
 			me._contact_info.logicBlock_visible();
 			me._contact_info.logicBlock_alpha();
@@ -14106,6 +14465,7 @@ function pano2vrSkin(player,base) {
 			me.__3rd_floornames.logicBlock_visible();
 			me._rectangle_1.logicBlock_backgroundcolor();
 			me._text_1.logicBlock_text();
+			me._text_1_1.logicBlock_text();
 		});
 		player.addListener('configloaded', function(event) {
 			if (hotspotTemplates.hasOwnProperty('ht_node_90')) {
@@ -14133,9 +14493,12 @@ function pano2vrSkin(player,base) {
 					hotspotTemplates['ht_node'][i].ggEvent_configloaded();
 				}
 			}
-			me._variable_Mobile.logicBlock();
-			me._variable_Tablet.logicBlock();
-			me._variable_Desktop.logicBlock();
+			me._variable_Mobile_P.logicBlock();
+			me._variable_Mobile_L.logicBlock();
+			me._variable_Tablet_P.logicBlock();
+			me._variable_Tablet_L.logicBlock();
+			me._variable_Desktop_L.logicBlock();
+			me._variable_FullScreen.logicBlock();
 			me._right_top_corner_panel.logicBlock_visible();
 			for (var i=0; i < me._mini_map.ggMarkerInstances.length; i++) {
 				me._mini_map.ggMarkerInstances[i].ggEvent_configloaded();
@@ -14169,7 +14532,9 @@ function pano2vrSkin(player,base) {
 			me._floors_blur_bg.logicBlock_alpha();
 			me._rooms_blur_bg.logicBlock_position();
 			me._rooms_blur_bg.logicBlock_alpha();
+			me._fullscreen_off_b.logicBlock_visible();
 			me._exit_fullscreen_h.logicBlock_visible();
+			me._fullscreen_b.logicBlock_visible();
 			me._fullscreen_h.logicBlock_visible();
 			me._contact_info.logicBlock_visible();
 			me._contact_info.logicBlock_alpha();
@@ -14199,6 +14564,7 @@ function pano2vrSkin(player,base) {
 			me._info_scroll_area.ggUpdatePosition();
 			me._rectangle_1.logicBlock_backgroundcolor();
 			me._text_1.logicBlock_text();
+			me._text_1_1.logicBlock_text();
 		});
 		player.addListener('hastouch', function(event) {
 			for (var i=0; i < me._mini_map.ggMarkerInstances.length; i++) {
@@ -14215,6 +14581,22 @@ function pano2vrSkin(player,base) {
 			player.setVariableValue('Floor_Visibility', false);
 			player.setVariableValue('contactpanel', false);
 		});
+		player.addListener('playerstatechanged', function(event) {
+			if (
+				(
+					((player.getVariableValue('FullScreen') == true))
+				)
+			) {
+				player.enterFullscreen();
+			}
+			if (
+				(
+					((player.getVariableValue('FullScreen') == false))
+				)
+			) {
+				player.exitFullscreen();
+			}
+		});
 		player.addListener('positionchanged', function(event) {
 			for (var i=0; i < me._mini_map.ggMarkerInstances.length; i++) {
 				me._mini_map.ggMarkerInstances[i].ggEvent_positionchanged();
@@ -14224,14 +14606,16 @@ function pano2vrSkin(player,base) {
 			}
 		});
 		player.addListener('sizechanged', function(event) {
-			me._variable_Mobile.logicBlock();
-			me._variable_Tablet.logicBlock();
-			me._variable_Desktop.logicBlock();
+			me._variable_Mobile_P.logicBlock();
+			me._variable_Mobile_L.logicBlock();
+			me._variable_Tablet_P.logicBlock();
+			me._variable_Tablet_L.logicBlock();
+			me._variable_Portrait.logicBlock();
 			me._switch_01.logicBlock_scaling();
 			me._switch_01.logicBlock_alpha();
 			me._mouse_qg.logicBlock_visible();
 		});
-		player.addListener('varchanged_Desktop', function(event) {
+		player.addListener('varchanged_Desktop_L', function(event) {
 			me._rectangle_1.logicBlock_backgroundcolor();
 			me._text_1.logicBlock_text();
 		});
@@ -14244,6 +14628,10 @@ function pano2vrSkin(player,base) {
 			me._floors_h.logicBlock_visible();
 			me._floors_blur_bg.logicBlock_position();
 			me._floors_blur_bg.logicBlock_alpha();
+		});
+		player.addListener('varchanged_FullScreen', function(event) {
+			me._fullscreen_off_b.logicBlock_visible();
+			me._fullscreen_b.logicBlock_visible();
 		});
 		player.addListener('varchanged_Hotspot_Visibility', function(event) {
 			if (hotspotTemplates.hasOwnProperty('ht_node_90')) {
@@ -14288,9 +14676,21 @@ function pano2vrSkin(player,base) {
 				me._floorplans.ggMarkerInstances[i].ggEvent_varchanged_Map_Pin_active_E();
 			}
 		});
-		player.addListener('varchanged_Mobile', function(event) {
+		player.addListener('varchanged_Mobile_L', function(event) {
+			me._variable_FullScreen.logicBlock();
 			me._rectangle_1.logicBlock_backgroundcolor();
 			me._text_1.logicBlock_text();
+		});
+		player.addListener('varchanged_Mobile_P', function(event) {
+			me._rectangle_1.logicBlock_backgroundcolor();
+			me._text_1.logicBlock_text();
+		});
+		player.addListener('varchanged_Portrait', function(event) {
+			me._variable_Mobile_P.logicBlock();
+			me._variable_Mobile_L.logicBlock();
+			me._variable_Tablet_P.logicBlock();
+			me._variable_Tablet_L.logicBlock();
+			me._text_1_1.logicBlock_text();
 		});
 		player.addListener('varchanged_Room_visibility_1F', function(event) {
 			me._scrollarea_1f.logicBlock_position();
@@ -14340,7 +14740,11 @@ function pano2vrSkin(player,base) {
 			me._laptop_qg.logicBlock_visible();
 			me._mouse_qg.logicBlock_visible();
 		});
-		player.addListener('varchanged_Tablet', function(event) {
+		player.addListener('varchanged_Tablet_L', function(event) {
+			me._rectangle_1.logicBlock_backgroundcolor();
+			me._text_1.logicBlock_text();
+		});
+		player.addListener('varchanged_Tablet_P', function(event) {
 			me._rectangle_1.logicBlock_backgroundcolor();
 			me._text_1.logicBlock_text();
 		});
