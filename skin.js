@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: NSH-UI auto resolution.ggsk
-// Generated 2025-08-08T18:20:19
+// Generated 2025-08-08T19:18:05
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -6511,13 +6511,13 @@ function pano2vrSkin(player,base) {
 		el.ggType='button';
 		hs ='';
 		hs+='z-index: 1;';
-		hs+='bottom : 2px;';
+		hs+='bottom : 10px;';
 		hs+='cursor : pointer;';
-		hs+='height : 25px;';
+		hs+='height : 35px;';
 		hs+='position : absolute;';
-		hs+='right : 2px;';
+		hs+='right : 10px;';
 		hs+='visibility : hidden;';
-		hs+='width : 25px;';
+		hs+='width : 35px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
@@ -6719,13 +6719,13 @@ function pano2vrSkin(player,base) {
 		el.ggType='button';
 		hs ='';
 		hs+='z-index: 1;';
-		hs+='bottom : 2px;';
+		hs+='bottom : 10px;';
 		hs+='cursor : pointer;';
-		hs+='height : 25px;';
+		hs+='height : 35px;';
 		hs+='position : absolute;';
-		hs+='right : 2px;';
+		hs+='right : 10px;';
 		hs+='visibility : inherit;';
-		hs+='width : 25px;';
+		hs+='width : 35px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
@@ -6932,13 +6932,13 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_button ";
 		el.ggType='button';
 		hs ='';
-		hs+='bottom : 2px;';
+		hs+='bottom : 10px;';
 		hs+='cursor : pointer;';
-		hs+='height : 25px;';
+		hs+='height : 35px;';
 		hs+='position : absolute;';
-		hs+='right : 132px;';
+		hs+='right : 162px;';
 		hs+='visibility : inherit;';
-		hs+='width : 25px;';
+		hs+='width : 35px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
@@ -7871,13 +7871,13 @@ function pano2vrSkin(player,base) {
 		el.ggType='button';
 		hs ='';
 		hs+='z-index: -1;';
-		hs+='bottom : 2px;';
+		hs+='bottom : 10px;';
 		hs+='cursor : pointer;';
-		hs+='height : 25px;';
+		hs+='height : 35px;';
 		hs+='position : absolute;';
-		hs+='right : 31px;';
+		hs+='right : 50px;';
 		hs+='visibility : hidden;';
-		hs+='width : 97px;';
+		hs+='width : 107px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
@@ -8077,13 +8077,13 @@ function pano2vrSkin(player,base) {
 		el.ggType='button';
 		hs ='';
 		hs+='z-index: -1;';
-		hs+='bottom : 2px;';
+		hs+='bottom : 10px;';
 		hs+='cursor : pointer;';
-		hs+='height : 25px;';
+		hs+='height : 35px;';
 		hs+='position : absolute;';
-		hs+='right : 31px;';
+		hs+='right : 50px;';
 		hs+='visibility : hidden;';
-		hs+='width : 97px;';
+		hs+='width : 107px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
@@ -8341,13 +8341,13 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_button ";
 		el.ggType='button';
 		hs ='';
-		hs+='bottom : 2px;';
+		hs+='bottom : 10px;';
 		hs+='cursor : pointer;';
-		hs+='height : 25px;';
-		hs+='left : 2px;';
+		hs+='height : 35px;';
+		hs+='left : 10px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
-		hs+='width : 25px;';
+		hs+='width : 35px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
@@ -8626,13 +8626,13 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_button ";
 		el.ggType='button';
 		hs ='';
-		hs+='bottom : 2px;';
+		hs+='bottom : 10px;';
 		hs+='cursor : pointer;';
-		hs+='height : 25px;';
-		hs+='left : 31px;';
+		hs+='height : 35px;';
+		hs+='left : 49px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
-		hs+='width : 25px;';
+		hs+='width : 35px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
@@ -8807,13 +8807,13 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_button ";
 		el.ggType='button';
 		hs ='';
-		hs+='bottom : 2px;';
+		hs+='bottom : 10px;';
 		hs+='cursor : pointer;';
-		hs+='height : 25px;';
-		hs+='left : 60px;';
+		hs+='height : 35px;';
+		hs+='left : 89px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
-		hs+='width : 25px;';
+		hs+='width : 35px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
@@ -9007,12 +9007,12 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_button ";
 		el.ggType='button';
 		hs ='';
-		hs+='bottom : 2px;';
-		hs+='height : 25px;';
-		hs+='left : 89px;';
+		hs+='bottom : 10px;';
+		hs+='height : 35px;';
+		hs+='left : 129px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
-		hs+='width : 25px;';
+		hs+='width : 35px;';
 		hs+='pointer-events:none;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
@@ -9254,13 +9254,13 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_button ";
 		el.ggType='button';
 		hs ='';
-		hs+='bottom : 2px;';
+		hs+='bottom : 10px;';
 		hs+='cursor : pointer;';
-		hs+='height : 25px;';
-		hs+='left : 2px;';
+		hs+='height : 35px;';
+		hs+='left : 10px;';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
-		hs+='width : 25px;';
+		hs+='width : 35px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(10px) grayscale(0%); -webkit-backdrop-filter: blur(10px) grayscale(0%);';
 		el.setAttribute('style',hs);
