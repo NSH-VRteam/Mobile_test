@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: NSH-UI auto resolution.ggsk
-// Generated 2025-08-12T13:44:23
+// Generated 2025-08-12T19:59:14
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -13758,12 +13758,12 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_container ";
 		el.ggType='container';
 		hs ='';
-		hs+='height : 50.9259%;';
-		hs+='left : calc(50% - ((52.0833% + 0px) / 2) + 0px);';
+		hs+='height : 550px;';
+		hs+='left : calc(50% - ((1000px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((50.9259% + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((550px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
-		hs+='width : 52.0833%;';
+		hs+='width : 1000px;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -13781,8 +13781,8 @@ function pano2vrSkin(player,base) {
 		}
 		me._product_information_ph.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._wolfrange_ph=document.createElement('div');
-		el.ggId="WolfRange_PH";
+		el=me._wolfrange_ph_landscape=document.createElement('div');
+		el.ggId="WolfRange_PH_Landscape";
 		el.ggDx=0;
 		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -13790,16 +13790,16 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_container ";
 		el.ggType='container';
 		hs ='';
-		hs+='height : 550px;';
-		hs+='left : calc(50% - ((1000px + 0px) / 2) + 0px);';
+		hs+='height : 600px;';
+		hs+='left : calc(50% - ((600px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((550px + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((600px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
-		hs+='width : 1000px;';
+		hs+='width : 600px;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._wolfrange_ph.ggIsActive=function() {
+		me._wolfrange_ph_landscape.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -13811,12 +13811,12 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._wolfrange_ph.ggUpdatePosition=function (useTransition) {
+		me._wolfrange_ph_landscape.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._productpanel_wolf_ph=document.createElement('div');
-		els=me._productpanel_wolf_ph__img=document.createElement('img');
-		els.className='ggskin ggskin_productpanel_wolf_ph';
-		hs=basePath + 'images/productpanel_wolf_ph.png';
+		el=me._productpanel_wolf_ph_land=document.createElement('div');
+		els=me._productpanel_wolf_ph_land__img=document.createElement('img');
+		els.className='ggskin ggskin_productpanel_wolf_ph_land';
+		hs=basePath + 'images/productpanel_wolf_ph_land.png';
 		els.setAttribute('src',hs);
 		els.ggNormalSrc=hs;
 		hs ='';
@@ -13827,7 +13827,7 @@ function pano2vrSkin(player,base) {
 		player.checkLoaded.push(els);
 		el.appendChild(els);
 		el.ggSubElement = els;
-		el.ggId="ProductPanel_Wolf_PH";
+		el.ggId="ProductPanel_Wolf_PH_Land";
 		el.ggDx=0;
 		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -13835,18 +13835,18 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_image ";
 		el.ggType='image';
 		hs ='';
-		hs+='height : 550px;';
-		hs+='left : calc(50% - ((1000px + 0px) / 2) + 0px);';
+		hs+='height : 350px;';
+		hs+='left : calc(50% - ((600px + 0px) / 2) + 0px);';
 		hs+='opacity : 0;';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((550px + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((350px + 0px) / 2) + 0px);';
 		hs+='visibility : hidden;';
-		hs+='width : 1000px;';
+		hs+='width : 600px;';
 		hs+='pointer-events:auto;';
 		hs+='backdrop-filter: blur(20px) grayscale(0%); -webkit-backdrop-filter: blur(20px) grayscale(0%);';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._productpanel_wolf_ph.ggIsActive=function() {
+		me._productpanel_wolf_ph_land.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -13858,13 +13858,50 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._productpanel_wolf_ph.ggUpdatePosition=function (useTransition) {
+		me._productpanel_wolf_ph_land.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getVariableValue('Mobile_L') == true))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getVariableValue('Mobile_P') == true))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._productpanel_wolf_ph_land.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._productpanel_wolf_ph_land.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._productpanel_wolf_ph_land.style.transition='';
+				if (me._productpanel_wolf_ph_land.ggCurrentLogicStateVisible == 0) {
+					me._productpanel_wolf_ph_land.style.visibility=(Number(me._productpanel_wolf_ph_land.style.opacity)>0||!me._productpanel_wolf_ph_land.style.opacity)?'inherit':'hidden';
+					me._productpanel_wolf_ph_land.ggVisible=true;
+				}
+				else if (me._productpanel_wolf_ph_land.ggCurrentLogicStateVisible == 1) {
+					me._productpanel_wolf_ph_land.style.visibility="hidden";
+					me._productpanel_wolf_ph_land.ggVisible=false;
+				}
+				else {
+					me._productpanel_wolf_ph_land.style.visibility=(Number(me._productpanel_wolf_ph_land.style.opacity)>0||!me._productpanel_wolf_ph_land.style.opacity)?'inherit':'hidden';
+					me._productpanel_wolf_ph_land.ggVisible=true;
+				}
+			}
 		}
-		el=me._product_heading_ph=document.createElement('div');
-		els=me._product_heading_ph__text=document.createElement('div');
+		me._productpanel_wolf_ph_land.logicBlock_visible();
+		me._productpanel_wolf_ph_land.ggUpdatePosition=function (useTransition) {
+		}
+		el=me._product_heading_ph_land=document.createElement('div');
+		els=me._product_heading_ph_land__text=document.createElement('div');
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
-		el.ggId="Product heading_PH";
+		el.ggId="Product heading_PH_Land";
+		el.ggDx=100;
+		el.ggDy=-120;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text tooltip";
@@ -13873,11 +13910,11 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='height : 100px;';
+		hs+='left : calc(50% - ((300px + 0px) / 2) + 100px);';
 		hs+='position : absolute;';
-		hs+='right : 50px;';
-		hs+='top : 55px;';
+		hs+='top : calc(50% - ((100px + 0px) / 2) - 120px);';
 		hs+='visibility : inherit;';
-		hs+='width : 500px;';
+		hs+='width : 300px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -13886,8 +13923,8 @@ function pano2vrSkin(player,base) {
 		hs+='width: 100%;';
 		hs+='height: auto;';
 		hs+='max-height: 100%;';
-		hs+='font-size: 25px;';
-		hs+='font-weight: 500;';
+		hs+='font-size: 20px;';
+		hs+='font-weight: 600;';
 		hs+='text-align: left;';
 		hs+='position: absolute;';
 		hs+='top: 50%;';
@@ -13896,7 +13933,7 @@ function pano2vrSkin(player,base) {
 		hs+='padding: 0px;';
 		hs+='overflow: hidden;';
 		els.setAttribute('style',hs);
-		me._product_heading_ph.ggUpdateText=function() {
+		me._product_heading_ph_land.ggUpdateText=function() {
 			var params = [];
 			var hs = player._("48\" Gas Range - 6 Burners and \nInfrared Charbroiler", params);
 			if (hs!=this.ggText) {
@@ -13905,9 +13942,9 @@ function pano2vrSkin(player,base) {
 				if (this.ggUpdatePosition) this.ggUpdatePosition();
 			}
 		}
-		me._product_heading_ph.ggUpdateText();
+		me._product_heading_ph_land.ggUpdateText();
 		el.appendChild(els);
-		me._product_heading_ph.ggIsActive=function() {
+		me._product_heading_ph_land.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -13919,10 +13956,12 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._product_heading_ph.ggUpdatePosition=function (useTransition) {
+		me._product_heading_ph_land.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._line_ph=document.createElement('div');
-		el.ggId="LIne_PH";
+		el=me._line_ph_land=document.createElement('div');
+		el.ggId="LIne_PH_Land";
+		el.ggDx=0;
+		el.ggDy=36;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -13932,15 +13971,15 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 999px;';
 		hs+='height : 2px;';
+		hs+='left : calc(50% - ((300px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
-		hs+='right : 100px;';
-		hs+='top : 101px;';
+		hs+='top : calc(50% - ((2px + 0px) / 2) + 36px);';
 		hs+='visibility : inherit;';
-		hs+='width : 400px;';
+		hs+='width : 300px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._line_ph.ggIsActive=function() {
+		me._line_ph_land.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -13952,28 +13991,30 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._line_ph.ggUpdatePosition=function (useTransition) {
+		me._line_ph_land.ggUpdatePosition=function (useTransition) {
 		}
-		me._product_heading_ph.appendChild(me._line_ph);
-		me._productpanel_wolf_ph.appendChild(me._product_heading_ph);
-		el=me._product_brand_ph=document.createElement('div');
-		els=me._product_brand_ph__text=document.createElement('div');
+		me._product_heading_ph_land.appendChild(me._line_ph_land);
+		me._productpanel_wolf_ph_land.appendChild(me._product_heading_ph_land);
+		el=me._product_brand_ph_land=document.createElement('div');
+		els=me._product_brand_ph_land__text=document.createElement('div');
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
-		el.ggId="Product Brand_PH";
+		el.ggId="Product Brand_PH_Land";
+		el.ggDx=-175;
+		el.ggDy=110;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text tooltip";
 		el.ggType='text';
 		hs ='';
 		hs+='border : 0px solid #000000;';
-		hs+='bottom : 35px;';
 		hs+='color : rgba(255,255,255,1);';
-		hs+='height : 100px;';
-		hs+='left : -30px;';
+		hs+='height : 40px;';
+		hs+='left : calc(50% - ((200px + 0px) / 2) - 175px);';
 		hs+='position : absolute;';
+		hs+='top : calc(50% - ((40px + 0px) / 2) + 110px);';
 		hs+='visibility : inherit;';
-		hs+='width : 500px;';
+		hs+='width : 200px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -13982,7 +14023,7 @@ function pano2vrSkin(player,base) {
 		hs+='width: 100%;';
 		hs+='height: auto;';
 		hs+='max-height: 100%;';
-		hs+='font-size: 30px;';
+		hs+='font-size: 25px;';
 		hs+='font-weight: 600;';
 		hs+='text-align: center;';
 		hs+='position: absolute;';
@@ -13992,7 +14033,7 @@ function pano2vrSkin(player,base) {
 		hs+='padding: 0px;';
 		hs+='overflow: hidden;';
 		els.setAttribute('style',hs);
-		me._product_brand_ph.ggUpdateText=function() {
+		me._product_brand_ph_land.ggUpdateText=function() {
 			var params = [];
 			var hs = player._("WOLF", params);
 			if (hs!=this.ggText) {
@@ -14001,9 +14042,9 @@ function pano2vrSkin(player,base) {
 				if (this.ggUpdatePosition) this.ggUpdatePosition();
 			}
 		}
-		me._product_brand_ph.ggUpdateText();
+		me._product_brand_ph_land.ggUpdateText();
 		el.appendChild(els);
-		me._product_brand_ph.ggIsActive=function() {
+		me._product_brand_ph_land.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -14015,13 +14056,13 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._product_brand_ph.ggUpdatePosition=function (useTransition) {
+		me._product_brand_ph_land.ggUpdatePosition=function (useTransition) {
 		}
-		me._productpanel_wolf_ph.appendChild(me._product_brand_ph);
-		el=me._wolf_ph=document.createElement('div');
-		els=me._wolf_ph__img=document.createElement('img');
-		els.className='ggskin ggskin_wolf_ph';
-		hs=basePath + 'images/wolf_ph.png';
+		me._productpanel_wolf_ph_land.appendChild(me._product_brand_ph_land);
+		el=me._wolf_ph_land=document.createElement('div');
+		els=me._wolf_ph_land__img=document.createElement('img');
+		els.className='ggskin ggskin_wolf_ph_land';
+		hs=basePath + 'images/wolf_ph_land.png';
 		els.setAttribute('src',hs);
 		els.ggNormalSrc=hs;
 		hs ='';
@@ -14032,7 +14073,8 @@ function pano2vrSkin(player,base) {
 		player.checkLoaded.push(els);
 		el.appendChild(els);
 		el.ggSubElement = els;
-		el.ggId="Wolf_PH";
+		el.ggId="Wolf_PH_Land";
+		el.ggDx=-175;
 		el.ggDy=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
@@ -14040,16 +14082,16 @@ function pano2vrSkin(player,base) {
 		el.ggType='image';
 		hs ='';
 		hs+='cursor : pointer;';
-		hs+='height : 237px;';
-		hs+='left : 70px;';
+		hs+='height : 149px;';
+		hs+='left : calc(50% - ((190px + 0px) / 2) - 175px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((237px + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((149px + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
-		hs+='width : 300px;';
+		hs+='width : 190px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._wolf_ph.ggIsActive=function() {
+		me._wolf_ph_land.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -14061,14 +14103,14 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._wolf_ph.onclick=function (e) {
+		me._wolf_ph_land.onclick=function (e) {
 			player.openUrl("https:\/\/www.subzero-wolf.com\/wolf\/ranges\/gas-range\/48-inch-gas-range-6-burners-infrared-griddle","_blank");
 		}
-		me._wolf_ph.ggUpdatePosition=function (useTransition) {
+		me._wolf_ph_land.ggUpdatePosition=function (useTransition) {
 		}
-		me._productpanel_wolf_ph.appendChild(me._wolf_ph);
-		el=me._info_scroll_area_ph=document.createElement('div');
-		els=me._info_scroll_area_ph__content=document.createElement('div');
+		me._productpanel_wolf_ph_land.appendChild(me._wolf_ph_land);
+		el=me._info_scroll_area_ph_land=document.createElement('div');
+		els=me._info_scroll_area_ph_land__content=document.createElement('div');
 		els.className='ggskin ggskin_subelement ggskin_scrollarea';
 		el.ggContent=els;
 		el.appendChild(els);
@@ -14084,171 +14126,171 @@ function pano2vrSkin(player,base) {
 		el.ggHPercentVisible = 1.0;
 		el.ggIsDragging = false;
 		hs ='';
-		hs+='height : 524px;';
+		hs+='height : 699px;';
 		hs+='left : 0px;';
 		hs+='overflow-x : visible;';
 		hs+='overflow-y : visible;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='width : 479px;';
+		hs+='width : 294px;';
 		hs+="";
 		els.setAttribute('style',hs);
-		me._info_scroll_area_ph.ggScrollByX = function(diffX) {
-			if(!me._info_scroll_area_ph.ggHorScrollVisible || diffX == 0 || me._info_scroll_area_ph.ggHPercentVisible >= 1.0) return;
-			me._info_scroll_area_ph.ggScrollPosX = (me._info_scroll_area_ph__horScrollFg.offsetLeft + diffX);
-			me._info_scroll_area_ph.ggScrollPosX = Math.max(me._info_scroll_area_ph.ggScrollPosX, 0);
-			me._info_scroll_area_ph.ggScrollPosX = Math.min(me._info_scroll_area_ph.ggScrollPosX, me._info_scroll_area_ph__horScrollBg.offsetWidth - me._info_scroll_area_ph__horScrollFg.offsetWidth);
-			me._info_scroll_area_ph__horScrollFg.style.left = me._info_scroll_area_ph.ggScrollPosX + 'px';
-			let percentScrolled = me._info_scroll_area_ph.ggScrollPosX / (me._info_scroll_area_ph__horScrollBg.offsetWidth - me._info_scroll_area_ph__horScrollFg.offsetWidth);
-			me._info_scroll_area_ph__content.style.left = -(Math.round((me._info_scroll_area_ph.ggContentWidth * (1.0 - me._info_scroll_area_ph.ggHPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph.ggContentLeftOffset + 'px';
-			me._info_scroll_area_ph.ggScrollPosXPercent = (me._info_scroll_area_ph__horScrollFg.offsetLeft / me._info_scroll_area_ph__horScrollBg.offsetWidth);
+		me._info_scroll_area_ph_land.ggScrollByX = function(diffX) {
+			if(!me._info_scroll_area_ph_land.ggHorScrollVisible || diffX == 0 || me._info_scroll_area_ph_land.ggHPercentVisible >= 1.0) return;
+			me._info_scroll_area_ph_land.ggScrollPosX = (me._info_scroll_area_ph_land__horScrollFg.offsetLeft + diffX);
+			me._info_scroll_area_ph_land.ggScrollPosX = Math.max(me._info_scroll_area_ph_land.ggScrollPosX, 0);
+			me._info_scroll_area_ph_land.ggScrollPosX = Math.min(me._info_scroll_area_ph_land.ggScrollPosX, me._info_scroll_area_ph_land__horScrollBg.offsetWidth - me._info_scroll_area_ph_land__horScrollFg.offsetWidth);
+			me._info_scroll_area_ph_land__horScrollFg.style.left = me._info_scroll_area_ph_land.ggScrollPosX + 'px';
+			let percentScrolled = me._info_scroll_area_ph_land.ggScrollPosX / (me._info_scroll_area_ph_land__horScrollBg.offsetWidth - me._info_scroll_area_ph_land__horScrollFg.offsetWidth);
+			me._info_scroll_area_ph_land__content.style.left = -(Math.round((me._info_scroll_area_ph_land.ggContentWidth * (1.0 - me._info_scroll_area_ph_land.ggHPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_land.ggContentLeftOffset + 'px';
+			me._info_scroll_area_ph_land.ggScrollPosXPercent = (me._info_scroll_area_ph_land__horScrollFg.offsetLeft / me._info_scroll_area_ph_land__horScrollBg.offsetWidth);
 		}
-		me._info_scroll_area_ph.ggScrollByXSmooth = function(diffX) {
-			if(!me._info_scroll_area_ph.ggHorScrollVisible || diffX == 0 || me._info_scroll_area_ph.ggHPercentVisible >= 1.0) return;
+		me._info_scroll_area_ph_land.ggScrollByXSmooth = function(diffX) {
+			if(!me._info_scroll_area_ph_land.ggHorScrollVisible || diffX == 0 || me._info_scroll_area_ph_land.ggHPercentVisible >= 1.0) return;
 			var scrollPerInterval = diffX / 25;
 			var scrollCurrX = 0;
 			var id = setInterval(function() {
 				scrollCurrX += scrollPerInterval;
-				me._info_scroll_area_ph.ggScrollPosX += scrollPerInterval;
-				if (diffX > 0 && (scrollCurrX >= diffX || me._info_scroll_area_ph.ggScrollPosX >= me._info_scroll_area_ph__horScrollBg.offsetWidth - me._info_scroll_area_ph__horScrollFg.offsetWidth)) {
-					me._info_scroll_area_ph.ggScrollPosX = Math.min(me._info_scroll_area_ph.ggScrollPosX, me._info_scroll_area_ph__horScrollBg.offsetWidth - me._info_scroll_area_ph__horScrollFg.offsetWidth);
+				me._info_scroll_area_ph_land.ggScrollPosX += scrollPerInterval;
+				if (diffX > 0 && (scrollCurrX >= diffX || me._info_scroll_area_ph_land.ggScrollPosX >= me._info_scroll_area_ph_land__horScrollBg.offsetWidth - me._info_scroll_area_ph_land__horScrollFg.offsetWidth)) {
+					me._info_scroll_area_ph_land.ggScrollPosX = Math.min(me._info_scroll_area_ph_land.ggScrollPosX, me._info_scroll_area_ph_land__horScrollBg.offsetWidth - me._info_scroll_area_ph_land__horScrollFg.offsetWidth);
 					clearInterval(id);
 				}
-				if (diffX < 0 && (scrollCurrX <= diffX || me._info_scroll_area_ph.ggScrollPosX <= 0)) {
-					me._info_scroll_area_ph.ggScrollPosX = Math.max(me._info_scroll_area_ph.ggScrollPosX, 0);
+				if (diffX < 0 && (scrollCurrX <= diffX || me._info_scroll_area_ph_land.ggScrollPosX <= 0)) {
+					me._info_scroll_area_ph_land.ggScrollPosX = Math.max(me._info_scroll_area_ph_land.ggScrollPosX, 0);
 					clearInterval(id);
 				}
-			me._info_scroll_area_ph__horScrollFg.style.left = me._info_scroll_area_ph.ggScrollPosX + 'px';
-			let percentScrolled = me._info_scroll_area_ph.ggScrollPosX / (me._info_scroll_area_ph__horScrollBg.offsetWidth - me._info_scroll_area_ph__horScrollFg.offsetWidth);
-			me._info_scroll_area_ph__content.style.left = -(Math.round((me._info_scroll_area_ph.ggContentWidth * (1.0 - me._info_scroll_area_ph.ggHPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph.ggContentLeftOffset + 'px';
-			me._info_scroll_area_ph.ggScrollPosXPercent = (me._info_scroll_area_ph__horScrollFg.offsetLeft / me._info_scroll_area_ph__horScrollBg.offsetWidth);
+			me._info_scroll_area_ph_land__horScrollFg.style.left = me._info_scroll_area_ph_land.ggScrollPosX + 'px';
+			let percentScrolled = me._info_scroll_area_ph_land.ggScrollPosX / (me._info_scroll_area_ph_land__horScrollBg.offsetWidth - me._info_scroll_area_ph_land__horScrollFg.offsetWidth);
+			me._info_scroll_area_ph_land__content.style.left = -(Math.round((me._info_scroll_area_ph_land.ggContentWidth * (1.0 - me._info_scroll_area_ph_land.ggHPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_land.ggContentLeftOffset + 'px';
+			me._info_scroll_area_ph_land.ggScrollPosXPercent = (me._info_scroll_area_ph_land__horScrollFg.offsetLeft / me._info_scroll_area_ph_land__horScrollBg.offsetWidth);
 			}, 10);
 		}
-		me._info_scroll_area_ph.ggScrollByY = function(diffY) {
-			if(!me._info_scroll_area_ph.ggVertScrollVisible || diffY == 0 || me._info_scroll_area_ph.ggVPercentVisible >= 1.0) return;
-			me._info_scroll_area_ph.ggScrollPosY = (me._info_scroll_area_ph__vertScrollFg.offsetTop + diffY);
-			me._info_scroll_area_ph.ggScrollPosY = Math.max(me._info_scroll_area_ph.ggScrollPosY, 0);
-			me._info_scroll_area_ph.ggScrollPosY = Math.min(me._info_scroll_area_ph.ggScrollPosY, me._info_scroll_area_ph__vertScrollBg.offsetHeight - me._info_scroll_area_ph__vertScrollFg.offsetHeight);
-			me._info_scroll_area_ph__vertScrollFg.style.top = me._info_scroll_area_ph.ggScrollPosY + 'px';
-			let percentScrolled = me._info_scroll_area_ph.ggScrollPosY / (me._info_scroll_area_ph__vertScrollBg.offsetHeight - me._info_scroll_area_ph__vertScrollFg.offsetHeight);
-			me._info_scroll_area_ph__content.style.top = -(Math.round((me._info_scroll_area_ph.ggContentHeight * (1.0 - me._info_scroll_area_ph.ggVPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph.ggContentTopOffset + 'px';
-			me._info_scroll_area_ph.ggScrollPosYPercent = (me._info_scroll_area_ph__vertScrollFg.offsetTop / me._info_scroll_area_ph__vertScrollBg.offsetHeight);
+		me._info_scroll_area_ph_land.ggScrollByY = function(diffY) {
+			if(!me._info_scroll_area_ph_land.ggVertScrollVisible || diffY == 0 || me._info_scroll_area_ph_land.ggVPercentVisible >= 1.0) return;
+			me._info_scroll_area_ph_land.ggScrollPosY = (me._info_scroll_area_ph_land__vertScrollFg.offsetTop + diffY);
+			me._info_scroll_area_ph_land.ggScrollPosY = Math.max(me._info_scroll_area_ph_land.ggScrollPosY, 0);
+			me._info_scroll_area_ph_land.ggScrollPosY = Math.min(me._info_scroll_area_ph_land.ggScrollPosY, me._info_scroll_area_ph_land__vertScrollBg.offsetHeight - me._info_scroll_area_ph_land__vertScrollFg.offsetHeight);
+			me._info_scroll_area_ph_land__vertScrollFg.style.top = me._info_scroll_area_ph_land.ggScrollPosY + 'px';
+			let percentScrolled = me._info_scroll_area_ph_land.ggScrollPosY / (me._info_scroll_area_ph_land__vertScrollBg.offsetHeight - me._info_scroll_area_ph_land__vertScrollFg.offsetHeight);
+			me._info_scroll_area_ph_land__content.style.top = -(Math.round((me._info_scroll_area_ph_land.ggContentHeight * (1.0 - me._info_scroll_area_ph_land.ggVPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_land.ggContentTopOffset + 'px';
+			me._info_scroll_area_ph_land.ggScrollPosYPercent = (me._info_scroll_area_ph_land__vertScrollFg.offsetTop / me._info_scroll_area_ph_land__vertScrollBg.offsetHeight);
 		}
-		me._info_scroll_area_ph.ggScrollByYSmooth = function(diffY) {
-			if(!me._info_scroll_area_ph.ggVertScrollVisible || diffY == 0 || me._info_scroll_area_ph.ggVPercentVisible >= 1.0) return;
+		me._info_scroll_area_ph_land.ggScrollByYSmooth = function(diffY) {
+			if(!me._info_scroll_area_ph_land.ggVertScrollVisible || diffY == 0 || me._info_scroll_area_ph_land.ggVPercentVisible >= 1.0) return;
 			var scrollPerInterval = diffY / 25;
 			var scrollCurrY = 0;
 			var id = setInterval(function() {
 				scrollCurrY += scrollPerInterval;
-				me._info_scroll_area_ph.ggScrollPosY += scrollPerInterval;
-				if (diffY > 0 && (scrollCurrY >= diffY || me._info_scroll_area_ph.ggScrollPosY >= me._info_scroll_area_ph__vertScrollBg.offsetHeight - me._info_scroll_area_ph__vertScrollFg.offsetHeight)) {
-					me._info_scroll_area_ph.ggScrollPosY = Math.min(me._info_scroll_area_ph.ggScrollPosY, me._info_scroll_area_ph__vertScrollBg.offsetHeight - me._info_scroll_area_ph__vertScrollFg.offsetHeight);
+				me._info_scroll_area_ph_land.ggScrollPosY += scrollPerInterval;
+				if (diffY > 0 && (scrollCurrY >= diffY || me._info_scroll_area_ph_land.ggScrollPosY >= me._info_scroll_area_ph_land__vertScrollBg.offsetHeight - me._info_scroll_area_ph_land__vertScrollFg.offsetHeight)) {
+					me._info_scroll_area_ph_land.ggScrollPosY = Math.min(me._info_scroll_area_ph_land.ggScrollPosY, me._info_scroll_area_ph_land__vertScrollBg.offsetHeight - me._info_scroll_area_ph_land__vertScrollFg.offsetHeight);
 					clearInterval(id);
 				}
-				if (diffY < 0 && (scrollCurrY <= diffY || me._info_scroll_area_ph.ggScrollPosY <= 0)) {
-					me._info_scroll_area_ph.ggScrollPosY = Math.max(me._info_scroll_area_ph.ggScrollPosY, 0);
+				if (diffY < 0 && (scrollCurrY <= diffY || me._info_scroll_area_ph_land.ggScrollPosY <= 0)) {
+					me._info_scroll_area_ph_land.ggScrollPosY = Math.max(me._info_scroll_area_ph_land.ggScrollPosY, 0);
 					clearInterval(id);
 				}
-			me._info_scroll_area_ph__vertScrollFg.style.top = me._info_scroll_area_ph.ggScrollPosY + 'px';
-			let percentScrolled = me._info_scroll_area_ph.ggScrollPosY / (me._info_scroll_area_ph__vertScrollBg.offsetHeight - me._info_scroll_area_ph__vertScrollFg.offsetHeight);
-			me._info_scroll_area_ph__content.style.top = -(Math.round((me._info_scroll_area_ph.ggContentHeight * (1.0 - me._info_scroll_area_ph.ggVPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph.ggContentTopOffset + 'px';
-			me._info_scroll_area_ph.ggScrollPosYPercent = (me._info_scroll_area_ph__vertScrollFg.offsetTop / me._info_scroll_area_ph__vertScrollBg.offsetHeight);
+			me._info_scroll_area_ph_land__vertScrollFg.style.top = me._info_scroll_area_ph_land.ggScrollPosY + 'px';
+			let percentScrolled = me._info_scroll_area_ph_land.ggScrollPosY / (me._info_scroll_area_ph_land__vertScrollBg.offsetHeight - me._info_scroll_area_ph_land__vertScrollFg.offsetHeight);
+			me._info_scroll_area_ph_land__content.style.top = -(Math.round((me._info_scroll_area_ph_land.ggContentHeight * (1.0 - me._info_scroll_area_ph_land.ggVPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_land.ggContentTopOffset + 'px';
+			me._info_scroll_area_ph_land.ggScrollPosYPercent = (me._info_scroll_area_ph_land__vertScrollFg.offsetTop / me._info_scroll_area_ph_land__vertScrollBg.offsetHeight);
 			}, 10);
 		}
-		me._info_scroll_area_ph.ggScrollIntoView = function(posX, posY, width, height) {
-			if (me._info_scroll_area_ph.ggHorScrollVisible) {
+		me._info_scroll_area_ph_land.ggScrollIntoView = function(posX, posY, width, height) {
+			if (me._info_scroll_area_ph_land.ggHorScrollVisible) {
 				if (posX < 0) {
-					var diffX = Math.floor(posX * me._info_scroll_area_ph.ggHPercentVisible);
-					me._info_scroll_area_ph.ggScrollByXSmooth(diffX);
-				} else if (posX + width > me._info_scroll_area_ph.clientWidth - (me._info_scroll_area_ph.ggVertScrollVisible ? 5 : 0)) {
-					var diffX = Math.ceil(((posX + width) - (me._info_scroll_area_ph.clientWidth - (me._info_scroll_area_ph.ggVertScrollVisible ? 5 : 0))) * me._info_scroll_area_ph.ggHPercentVisible);
-					me._info_scroll_area_ph.ggScrollByXSmooth(diffX);
+					var diffX = Math.floor(posX * me._info_scroll_area_ph_land.ggHPercentVisible);
+					me._info_scroll_area_ph_land.ggScrollByXSmooth(diffX);
+				} else if (posX + width > me._info_scroll_area_ph_land.clientWidth - (me._info_scroll_area_ph_land.ggVertScrollVisible ? 2 : 0)) {
+					var diffX = Math.ceil(((posX + width) - (me._info_scroll_area_ph_land.clientWidth - (me._info_scroll_area_ph_land.ggVertScrollVisible ? 2 : 0))) * me._info_scroll_area_ph_land.ggHPercentVisible);
+					me._info_scroll_area_ph_land.ggScrollByXSmooth(diffX);
 				}
 			}
-			if (me._info_scroll_area_ph.ggVertScrollVisible) {
+			if (me._info_scroll_area_ph_land.ggVertScrollVisible) {
 				if (posY < 0) {
-					var diffY = Math.floor(posY * me._info_scroll_area_ph.ggVPercentVisible);
-					me._info_scroll_area_ph.ggScrollByYSmooth(diffY);
-				} else if (posY + height > me._info_scroll_area_ph.clientHeight - (me._info_scroll_area_ph.ggHorScrollVisible ? 5 : 0)) {
-					var diffY = Math.ceil(((posY + height) - (me._info_scroll_area_ph.clientHeight - (me._info_scroll_area_ph.ggHorScrollVisible ? 5 : 0))) * me._info_scroll_area_ph.ggVPercentVisible);
-					me._info_scroll_area_ph.ggScrollByYSmooth(diffY);
+					var diffY = Math.floor(posY * me._info_scroll_area_ph_land.ggVPercentVisible);
+					me._info_scroll_area_ph_land.ggScrollByYSmooth(diffY);
+				} else if (posY + height > me._info_scroll_area_ph_land.clientHeight - (me._info_scroll_area_ph_land.ggHorScrollVisible ? 2 : 0)) {
+					var diffY = Math.ceil(((posY + height) - (me._info_scroll_area_ph_land.clientHeight - (me._info_scroll_area_ph_land.ggHorScrollVisible ? 2 : 0))) * me._info_scroll_area_ph_land.ggVPercentVisible);
+					me._info_scroll_area_ph_land.ggScrollByYSmooth(diffY);
 				}
 			}
 		}
-		me._info_scroll_area_ph__content.mousetouchend = e => {
+		me._info_scroll_area_ph_land__content.mousetouchend = e => {
 			let inertiaInterval = setInterval(function() {
-				me._info_scroll_area_ph.ggDragInertiaX *= 0.96;
-				me._info_scroll_area_ph.ggDragInertiaY *= 0.96;
-				me._info_scroll_area_ph.ggScrollByX(me._info_scroll_area_ph.ggDragInertiaX);
-				me._info_scroll_area_ph.ggScrollByY(me._info_scroll_area_ph.ggDragInertiaY);
-				if (Math.abs(me._info_scroll_area_ph.ggDragInertiaX) < 1.0 && Math.abs(me._info_scroll_area_ph.ggDragInertiaY) < 1.0) {
+				me._info_scroll_area_ph_land.ggDragInertiaX *= 0.96;
+				me._info_scroll_area_ph_land.ggDragInertiaY *= 0.96;
+				me._info_scroll_area_ph_land.ggScrollByX(me._info_scroll_area_ph_land.ggDragInertiaX);
+				me._info_scroll_area_ph_land.ggScrollByY(me._info_scroll_area_ph_land.ggDragInertiaY);
+				if (Math.abs(me._info_scroll_area_ph_land.ggDragInertiaX) < 1.0 && Math.abs(me._info_scroll_area_ph_land.ggDragInertiaY) < 1.0) {
 					clearInterval(inertiaInterval);
 				}
 				}, 10);
-			me._info_scroll_area_ph__content.onmouseup = null;
-			me._info_scroll_area_ph__content.onmousemove = null;
-			me._info_scroll_area_ph__content.ontouchend = null;
-			me._info_scroll_area_ph__content.ontouchmove = null;
-			me._info_scroll_area_ph__content.onpointerup = null;
-			me._info_scroll_area_ph__content.onpointermove = null;
-			setTimeout(function() { me._info_scroll_area_ph.ggIsDragging = false; }, 100);
+			me._info_scroll_area_ph_land__content.onmouseup = null;
+			me._info_scroll_area_ph_land__content.onmousemove = null;
+			me._info_scroll_area_ph_land__content.ontouchend = null;
+			me._info_scroll_area_ph_land__content.ontouchmove = null;
+			me._info_scroll_area_ph_land__content.onpointerup = null;
+			me._info_scroll_area_ph_land__content.onpointermove = null;
+			setTimeout(function() { me._info_scroll_area_ph_land.ggIsDragging = false; }, 100);
 		}
-		me._info_scroll_area_ph__content.mousetouchmove = e => {
+		me._info_scroll_area_ph_land__content.mousetouchmove = e => {
 			e = e || window.event;
 			e.preventDefault();
 			var t = e.touches;
 			var eventX = t ? t[0].clientX : e.clientX;
 			var eventY = t ? t[0].clientY : e.clientY;
-			if (Math.abs(eventX - me._info_scroll_area_ph.ggDragStartX) > 10 || Math.abs(eventY - me._info_scroll_area_ph.ggDragStartY) > 10) me._info_scroll_area_ph.ggIsDragging = true;
-			var diffX = (eventX - me._info_scroll_area_ph.ggDragLastX) * me._info_scroll_area_ph.ggHPercentVisible;
-			var diffY = (eventY - me._info_scroll_area_ph.ggDragLastY) * me._info_scroll_area_ph.ggVPercentVisible;
-			me._info_scroll_area_ph.ggDragInertiaX = -diffX;
-			me._info_scroll_area_ph.ggDragInertiaY = -diffY;
-			me._info_scroll_area_ph.ggDragLastX = eventX;
-			me._info_scroll_area_ph.ggDragLastY = eventY;
-			me._info_scroll_area_ph.ggScrollByX(-diffX);
-			me._info_scroll_area_ph.ggScrollByY(-diffY);
+			if (Math.abs(eventX - me._info_scroll_area_ph_land.ggDragStartX) > 10 || Math.abs(eventY - me._info_scroll_area_ph_land.ggDragStartY) > 10) me._info_scroll_area_ph_land.ggIsDragging = true;
+			var diffX = (eventX - me._info_scroll_area_ph_land.ggDragLastX) * me._info_scroll_area_ph_land.ggHPercentVisible;
+			var diffY = (eventY - me._info_scroll_area_ph_land.ggDragLastY) * me._info_scroll_area_ph_land.ggVPercentVisible;
+			me._info_scroll_area_ph_land.ggDragInertiaX = -diffX;
+			me._info_scroll_area_ph_land.ggDragInertiaY = -diffY;
+			me._info_scroll_area_ph_land.ggDragLastX = eventX;
+			me._info_scroll_area_ph_land.ggDragLastY = eventY;
+			me._info_scroll_area_ph_land.ggScrollByX(-diffX);
+			me._info_scroll_area_ph_land.ggScrollByY(-diffY);
 		}
-		me._info_scroll_area_ph__content.mousetouchstart = e => {
+		me._info_scroll_area_ph_land__content.mousetouchstart = e => {
 			e = e || window.event;
 			var t = e.touches;
-			me._info_scroll_area_ph.ggDragLastX = me._info_scroll_area_ph.ggDragStartX = t ? t[0].clientX : e.clientX;
-			me._info_scroll_area_ph.ggDragLastY = me._info_scroll_area_ph.ggDragStartY = t ? t[0].clientY : e.clientY;
-			me._info_scroll_area_ph__content.onmouseup = me._info_scroll_area_ph__content.mousetouchend;
-			me._info_scroll_area_ph__content.ontouchend = me._info_scroll_area_ph__content.mousetouchend;
-			me._info_scroll_area_ph__content.onmousemove = me._info_scroll_area_ph__content.mousetouchmove;
-			me._info_scroll_area_ph__content.ontouchmove = me._info_scroll_area_ph__content.mousetouchmove;
+			me._info_scroll_area_ph_land.ggDragLastX = me._info_scroll_area_ph_land.ggDragStartX = t ? t[0].clientX : e.clientX;
+			me._info_scroll_area_ph_land.ggDragLastY = me._info_scroll_area_ph_land.ggDragStartY = t ? t[0].clientY : e.clientY;
+			me._info_scroll_area_ph_land__content.onmouseup = me._info_scroll_area_ph_land__content.mousetouchend;
+			me._info_scroll_area_ph_land__content.ontouchend = me._info_scroll_area_ph_land__content.mousetouchend;
+			me._info_scroll_area_ph_land__content.onmousemove = me._info_scroll_area_ph_land__content.mousetouchmove;
+			me._info_scroll_area_ph_land__content.ontouchmove = me._info_scroll_area_ph_land__content.mousetouchmove;
 			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-				me._info_scroll_area_ph__content.onpointerup = me._info_scroll_area_ph__content.ontouchend;
-				me._info_scroll_area_ph__content.onpointermove = me._info_scroll_area_ph__content.ontouchmove;
+				me._info_scroll_area_ph_land__content.onpointerup = me._info_scroll_area_ph_land__content.ontouchend;
+				me._info_scroll_area_ph_land__content.onpointermove = me._info_scroll_area_ph_land__content.ontouchmove;
 			}
 		}
-		els.onmousedown = me._info_scroll_area_ph__content.mousetouchstart;
-		els.ontouchstart = me._info_scroll_area_ph__content.mousetouchstart;
+		els.onmousedown = me._info_scroll_area_ph_land__content.mousetouchstart;
+		els.ontouchstart = me._info_scroll_area_ph_land__content.mousetouchstart;
 		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
-			els.onpointerdown = me._info_scroll_area_ph__content.mousetouchstart;
+			els.onpointerdown = me._info_scroll_area_ph_land__content.mousetouchstart;
 		}
-		elVertScrollBg = me._info_scroll_area_ph__vertScrollBg = document.createElement('div');
+		elVertScrollBg = me._info_scroll_area_ph_land__vertScrollBg = document.createElement('div');
 		el.appendChild(elVertScrollBg);
-		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 5px; height: 300px; background-color: rgba(128,128,128,0.196078); pointer-events: auto;');
+		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 2px; height: 200px; background-color: rgba(128,128,128,0.196078); pointer-events: auto;');
 		elVertScrollBg.className='ggskin ggskin_scrollarea_vscrollbg';
-		elVertScrollFg = me._info_scroll_area_ph__vertScrollFg = document.createElement('div');
+		elVertScrollFg = me._info_scroll_area_ph_land__vertScrollFg = document.createElement('div');
 		elVertScrollBg.appendChild(elVertScrollFg);
-		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 5px; height: 300px; background-color: rgba(192,192,192,0.196078); pointer-events: auto;');
+		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 2px; height: 200px; background-color: rgba(192,192,192,0.196078); pointer-events: auto;');
 		elVertScrollFg.className='ggskin ggskin_scrollarea_vscrollfg';
-		me._info_scroll_area_ph.ggScrollPosY = 0;
-		me._info_scroll_area_ph.ggScrollPosYPercent = 0.0;
+		me._info_scroll_area_ph_land.ggScrollPosY = 0;
+		me._info_scroll_area_ph_land.ggScrollPosYPercent = 0.0;
 		elVertScrollFg.onmousedown = function(e) {
 			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) return;
 			e = e || window.event;
 			e.preventDefault();
 			e.stopPropagation();
-			me._info_scroll_area_ph.ggDragLastY = e.clientY;
+			me._info_scroll_area_ph_land.ggDragLastY = e.clientY;
 			document.onmouseup = function() {
 				let inertiaInterval = setInterval(function() {
-					me._info_scroll_area_ph.ggDragInertiaY *= 0.96;
-					me._info_scroll_area_ph.ggScrollByY(me._info_scroll_area_ph.ggDragInertiaY);
-					if (Math.abs(me._info_scroll_area_ph.ggDragInertiaY) < 1.0) {
+					me._info_scroll_area_ph_land.ggDragInertiaY *= 0.96;
+					me._info_scroll_area_ph_land.ggScrollByY(me._info_scroll_area_ph_land.ggDragInertiaY);
+					if (Math.abs(me._info_scroll_area_ph_land.ggDragInertiaY) < 1.0) {
 						clearInterval(inertiaInterval);
 					}
 					}, 10);
@@ -14258,10 +14300,10 @@ function pano2vrSkin(player,base) {
 			document.onmousemove = function(e) {
 				e = e || window.event;
 				e.preventDefault();
-				var diffY = e.clientY - me._info_scroll_area_ph.ggDragLastY;
-				me._info_scroll_area_ph.ggDragInertiaY = diffY;
-				me._info_scroll_area_ph.ggDragLastY = e.clientY;
-				me._info_scroll_area_ph.ggScrollByY(diffY);
+				var diffY = e.clientY - me._info_scroll_area_ph_land.ggDragLastY;
+				me._info_scroll_area_ph_land.ggDragInertiaY = diffY;
+				me._info_scroll_area_ph_land.ggDragLastY = e.clientY;
+				me._info_scroll_area_ph_land.ggScrollByY(diffY);
 			}
 		}
 		elVertScrollFg.ontouchstart = function(e) {
@@ -14269,12 +14311,12 @@ function pano2vrSkin(player,base) {
 			e.preventDefault();
 			e.stopPropagation();
 			var t = e.touches;
-			me._info_scroll_area_ph.ggDragLastY = t ? t[0].clientY : e.clientY;
+			me._info_scroll_area_ph_land.ggDragLastY = t ? t[0].clientY : e.clientY;
 			document.ontouchend = function() {
 				let inertiaInterval = setInterval(function() {
-					me._info_scroll_area_ph.ggDragInertiaY *= 0.96;
-					me._info_scroll_area_ph.ggScrollByY(me._info_scroll_area_ph.ggDragInertiaY);
-					if (Math.abs(me._info_scroll_area_ph.ggDragInertiaY) < 1.0) {
+					me._info_scroll_area_ph_land.ggDragInertiaY *= 0.96;
+					me._info_scroll_area_ph_land.ggScrollByY(me._info_scroll_area_ph_land.ggDragInertiaY);
+					if (Math.abs(me._info_scroll_area_ph_land.ggDragInertiaY) < 1.0) {
 						clearInterval(inertiaInterval);
 					}
 					}, 10);
@@ -14290,10 +14332,10 @@ function pano2vrSkin(player,base) {
 				e = e || window.event;
 				e.preventDefault();
 				var t = e.touches;
-				var diffY = (t ? t[0].clientY : e.clientY) - me._info_scroll_area_ph.ggDragLastY;
-				me._info_scroll_area_ph.ggDragInertiaY = diffY;
-				me._info_scroll_area_ph.ggDragLastY = t ? t[0].clientY : e.clientY;
-				me._info_scroll_area_ph.ggScrollByY(diffY);
+				var diffY = (t ? t[0].clientY : e.clientY) - me._info_scroll_area_ph_land.ggDragLastY;
+				me._info_scroll_area_ph_land.ggDragInertiaY = diffY;
+				me._info_scroll_area_ph_land.ggDragLastY = t ? t[0].clientY : e.clientY;
+				me._info_scroll_area_ph_land.ggScrollByY(diffY);
 			}
 			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
 				document.onpointermove = document.ontouchmove;
@@ -14305,35 +14347,36 @@ function pano2vrSkin(player,base) {
 		elVertScrollBg.onmousedown = function(e) {
 			e = e || window.event;
 			e.preventDefault();
-			var diffY = me._info_scroll_area_ph.ggScrollHeight;
-			if (e.offsetY < me._info_scroll_area_ph.ggScrollPosY) {
+			var diffY = me._info_scroll_area_ph_land.ggScrollHeight;
+			if (e.offsetY < me._info_scroll_area_ph_land.ggScrollPosY) {
 				diffY = diffY * -1;
 			}
-			me._info_scroll_area_ph.ggScrollByYSmooth(diffY);
+			me._info_scroll_area_ph_land.ggScrollByYSmooth(diffY);
 		}
 		elVertScrollBg.ontouchstart = function(e) {
 			e = e || window.event;
 			e.preventDefault();
 			e.stopPropagation();
 			var t = e.touches;
-			var rect = me._info_scroll_area_ph__vertScrollBg.getBoundingClientRect();
-			var diffY = me._info_scroll_area_ph.ggScrollHeight;
-			if ((t[0].clientY - rect.top) < me._info_scroll_area_ph.ggScrollPosY) {
+			var rect = me._info_scroll_area_ph_land__vertScrollBg.getBoundingClientRect();
+			var diffY = me._info_scroll_area_ph_land.ggScrollHeight;
+			if ((t[0].clientY - rect.top) < me._info_scroll_area_ph_land.ggScrollPosY) {
 				diffY = diffY * -1;
 			}
-			me._info_scroll_area_ph.ggScrollByYSmooth(diffY);
+			me._info_scroll_area_ph_land.ggScrollByYSmooth(diffY);
 		}
 		el.addEventListener('wheel', function(e) {
 			e.preventDefault();
 			var wheelDelta = Math.sign(e.deltaY);
-			me._info_scroll_area_ph.ggScrollByYSmooth(30 * me._info_scroll_area_ph.ggVPercentVisible * wheelDelta);
+			me._info_scroll_area_ph_land.ggScrollByYSmooth(30 * me._info_scroll_area_ph_land.ggVPercentVisible * wheelDelta);
 		});
-		elCornerBg = me._info_scroll_area_ph__cornerBg = document.createElement('div');
+		elCornerBg = me._info_scroll_area_ph_land__cornerBg = document.createElement('div');
 		el.appendChild(elCornerBg);
-		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 5px; height: 5px; background-color: rgba(255,255,255,0.392157);');
+		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 2px; height: 2px; background-color: rgba(255,255,255,0.392157);');
 		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
-		el.ggId="Info scroll area_PH";
-		el.ggDy=50;
+		el.ggId="Info scroll area_PH_Land";
+		el.ggDx=100;
+		el.ggDy=40;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_scrollarea ";
@@ -14341,17 +14384,17 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='background : rgba(255,255,255,0);';
 		hs+='border : 0px solid #000000;';
-		hs+='height : 300px;';
+		hs+='height : 200px;';
+		hs+='left : calc(50% - ((300px + 0px) / 2) + 100px);';
 		hs+='overflow : hidden;';
 		hs+='position : absolute;';
-		hs+='right : 50px;';
-		hs+='top : calc(50% - ((300px + 0px) / 2) + 50px);';
+		hs+='top : calc(50% - ((200px + 0px) / 2) + 40px);';
 		hs+='visibility : inherit;';
-		hs+='width : 500px;';
+		hs+='width : 300px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._info_scroll_area_ph.ggIsActive=function() {
+		me._info_scroll_area_ph_land.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -14363,7 +14406,7 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._info_scroll_area_ph.ggUpdatePosition=function (useTransition) {
+		me._info_scroll_area_ph_land.ggUpdatePosition=function (useTransition) {
 			{
 				var horScrollWasVisible = this.ggHorScrollVisible;
 				var vertScrollWasVisible = this.ggVertScrollVisible;
@@ -14411,60 +14454,60 @@ function pano2vrSkin(player,base) {
 				this.ggContentHeight = contentHeight / scaleY;
 				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
 				this.ggContent.style.marginLeft = '0px';
-				this.ggContent.style.top = -(Math.round(me._info_scroll_area_ph.ggScrollPosY / me._info_scroll_area_ph.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
+				this.ggContent.style.top = -(Math.round(me._info_scroll_area_ph_land.ggScrollPosY / me._info_scroll_area_ph_land.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
 				this.ggContent.style.marginTop = '0px';
-				me._info_scroll_area_ph__vertScrollBg.style.visibility = 'inherit';
-				me._info_scroll_area_ph__vertScrollFg.style.visibility = 'inherit';
-				me._info_scroll_area_ph.ggVertScrollVisible = true;
-				if(me._info_scroll_area_ph.ggVertScrollVisible) {
-					me._info_scroll_area_ph.ggAvailableWidth = me._info_scroll_area_ph.clientWidth - 5;
-					if (me._info_scroll_area_ph.ggHorScrollVisible) {
-						me._info_scroll_area_ph.ggAvailableHeight = me._info_scroll_area_ph.clientHeight - 5;
-						me._info_scroll_area_ph.ggAvailableHeightWithScale = me._info_scroll_area_ph.getBoundingClientRect().height - me._info_scroll_area_ph__vertScrollBg.getBoundingClientRect().width;
-						me._info_scroll_area_ph__cornerBg.style.visibility = 'inherit';
+				me._info_scroll_area_ph_land__vertScrollBg.style.visibility = 'inherit';
+				me._info_scroll_area_ph_land__vertScrollFg.style.visibility = 'inherit';
+				me._info_scroll_area_ph_land.ggVertScrollVisible = true;
+				if(me._info_scroll_area_ph_land.ggVertScrollVisible) {
+					me._info_scroll_area_ph_land.ggAvailableWidth = me._info_scroll_area_ph_land.clientWidth - 2;
+					if (me._info_scroll_area_ph_land.ggHorScrollVisible) {
+						me._info_scroll_area_ph_land.ggAvailableHeight = me._info_scroll_area_ph_land.clientHeight - 2;
+						me._info_scroll_area_ph_land.ggAvailableHeightWithScale = me._info_scroll_area_ph_land.getBoundingClientRect().height - me._info_scroll_area_ph_land__vertScrollBg.getBoundingClientRect().width;
+						me._info_scroll_area_ph_land__cornerBg.style.visibility = 'inherit';
 					} else {
-						me._info_scroll_area_ph.ggAvailableHeight = me._info_scroll_area_ph.clientHeight;
-						me._info_scroll_area_ph.ggAvailableHeightWithScale = me._info_scroll_area_ph.getBoundingClientRect().height;
-						me._info_scroll_area_ph__cornerBg.style.visibility = 'hidden';
+						me._info_scroll_area_ph_land.ggAvailableHeight = me._info_scroll_area_ph_land.clientHeight;
+						me._info_scroll_area_ph_land.ggAvailableHeightWithScale = me._info_scroll_area_ph_land.getBoundingClientRect().height;
+						me._info_scroll_area_ph_land__cornerBg.style.visibility = 'hidden';
 					}
-					me._info_scroll_area_ph__vertScrollBg.style.height = me._info_scroll_area_ph.ggAvailableHeight + 'px';
-					me._info_scroll_area_ph.ggVPercentVisible = contentHeight != 0 ? me._info_scroll_area_ph.ggAvailableHeightWithScale / contentHeight : 0.0;
-					if (me._info_scroll_area_ph.ggVPercentVisible > 1.0) me._info_scroll_area_ph.ggVPercentVisible = 1.0;
-					me._info_scroll_area_ph.ggScrollHeight =  Math.round(me._info_scroll_area_ph__vertScrollBg.offsetHeight * me._info_scroll_area_ph.ggVPercentVisible);
-					me._info_scroll_area_ph__vertScrollFg.style.height = me._info_scroll_area_ph.ggScrollHeight + 'px';
-					me._info_scroll_area_ph.ggScrollPosY = me._info_scroll_area_ph.ggScrollPosYPercent * me._info_scroll_area_ph.ggAvailableHeight;
-					me._info_scroll_area_ph.ggScrollPosY = Math.min(me._info_scroll_area_ph.ggScrollPosY, me._info_scroll_area_ph__vertScrollBg.offsetHeight - me._info_scroll_area_ph__vertScrollFg.offsetHeight);
-					me._info_scroll_area_ph__vertScrollFg.style.top = me._info_scroll_area_ph.ggScrollPosY + 'px';
-					if (me._info_scroll_area_ph.ggVPercentVisible < 1.0) {
-						let percentScrolled = me._info_scroll_area_ph.ggScrollPosY / (me._info_scroll_area_ph__vertScrollBg.offsetHeight - me._info_scroll_area_ph__vertScrollFg.offsetHeight);
-						me._info_scroll_area_ph__content.style.top = -(Math.round((me._info_scroll_area_ph.ggContentHeight * (1.0 - me._info_scroll_area_ph.ggVPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph.ggContentTopOffset + 'px';
+					me._info_scroll_area_ph_land__vertScrollBg.style.height = me._info_scroll_area_ph_land.ggAvailableHeight + 'px';
+					me._info_scroll_area_ph_land.ggVPercentVisible = contentHeight != 0 ? me._info_scroll_area_ph_land.ggAvailableHeightWithScale / contentHeight : 0.0;
+					if (me._info_scroll_area_ph_land.ggVPercentVisible > 1.0) me._info_scroll_area_ph_land.ggVPercentVisible = 1.0;
+					me._info_scroll_area_ph_land.ggScrollHeight =  Math.round(me._info_scroll_area_ph_land__vertScrollBg.offsetHeight * me._info_scroll_area_ph_land.ggVPercentVisible);
+					me._info_scroll_area_ph_land__vertScrollFg.style.height = me._info_scroll_area_ph_land.ggScrollHeight + 'px';
+					me._info_scroll_area_ph_land.ggScrollPosY = me._info_scroll_area_ph_land.ggScrollPosYPercent * me._info_scroll_area_ph_land.ggAvailableHeight;
+					me._info_scroll_area_ph_land.ggScrollPosY = Math.min(me._info_scroll_area_ph_land.ggScrollPosY, me._info_scroll_area_ph_land__vertScrollBg.offsetHeight - me._info_scroll_area_ph_land__vertScrollFg.offsetHeight);
+					me._info_scroll_area_ph_land__vertScrollFg.style.top = me._info_scroll_area_ph_land.ggScrollPosY + 'px';
+					if (me._info_scroll_area_ph_land.ggVPercentVisible < 1.0) {
+						let percentScrolled = me._info_scroll_area_ph_land.ggScrollPosY / (me._info_scroll_area_ph_land__vertScrollBg.offsetHeight - me._info_scroll_area_ph_land__vertScrollFg.offsetHeight);
+						me._info_scroll_area_ph_land__content.style.top = -(Math.round((me._info_scroll_area_ph_land.ggContentHeight * (1.0 - me._info_scroll_area_ph_land.ggVPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_land.ggContentTopOffset + 'px';
 					}
 				} else {
-					me._info_scroll_area_ph.ggAvailableWidth = me._info_scroll_area_ph.clientWidth;
-					me._info_scroll_area_ph.ggScrollPosY = 0;
-					me._info_scroll_area_ph.ggScrollPosYPercent = 0.0;
-					me._info_scroll_area_ph__content.style.top = this.ggContentTopOffset + 'px';
-					me._info_scroll_area_ph__cornerBg.style.visibility = 'hidden';
+					me._info_scroll_area_ph_land.ggAvailableWidth = me._info_scroll_area_ph_land.clientWidth;
+					me._info_scroll_area_ph_land.ggScrollPosY = 0;
+					me._info_scroll_area_ph_land.ggScrollPosYPercent = 0.0;
+					me._info_scroll_area_ph_land__content.style.top = this.ggContentTopOffset + 'px';
+					me._info_scroll_area_ph_land__cornerBg.style.visibility = 'hidden';
 				}
-				if(horScrollWasVisible != me._info_scroll_area_ph.ggHorScrollVisible || vertScrollWasVisible != me._info_scroll_area_ph.ggVertScrollVisible) {
-					skin.updateSize(me._info_scroll_area_ph);
-					me._info_scroll_area_ph.ggUpdatePosition();
+				if(horScrollWasVisible != me._info_scroll_area_ph_land.ggHorScrollVisible || vertScrollWasVisible != me._info_scroll_area_ph_land.ggVertScrollVisible) {
+					skin.updateSize(me._info_scroll_area_ph_land);
+					me._info_scroll_area_ph_land.ggUpdatePosition();
 				}
 			}
 		}
-		el=me._contents_ph=document.createElement('div');
+		el=me._contents_ph_land=document.createElement('div');
 		el.isDragging = function() {
-			let scrollerParent = me._contents_ph;
+			let scrollerParent = me._contents_ph_land;
 			while ((scrollerParent = scrollerParent.parentNode) != null) {
 				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
 			}
 			return false;
 		}
-		els=me._contents_ph__text=document.createElement('div');
+		els=me._contents_ph_land__text=document.createElement('div');
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
-		el.ggId="Contents_PH";
-		el.ggDx=-10;
+		el.ggId="Contents_PH_Land";
+		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_text ";
@@ -14472,12 +14515,12 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='border : 0px solid #000000;';
 		hs+='color : rgba(255,255,255,1);';
-		hs+='height : 750px;';
-		hs+='left : calc(50% - ((480px + 0px) / 2) - 10px);';
+		hs+='height : 700px;';
+		hs+='left : calc(50% - ((290px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
-		hs+='top : -225px;';
+		hs+='top : 0px;';
 		hs+='visibility : inherit;';
-		hs+='width : 480px;';
+		hs+='width : 290px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -14485,13 +14528,15 @@ function pano2vrSkin(player,base) {
 		hs += 'box-sizing: border-box;';
 		hs+='width: 100%;';
 		hs+='height: 100%;';
+		hs+='font-size: 12px;';
+		hs+='font-weight: normal;';
 		hs+='text-align: justify;';
 		hs+='white-space: pre-line;';
 		hs+='padding: 0px;';
 		hs+='overflow: hidden;';
 		hs+='overflow-y: auto;';
 		els.setAttribute('style',hs);
-		me._contents_ph.ggUpdateText=function() {
+		me._contents_ph_land.ggUpdateText=function() {
 			var params = [];
 			var hs = player._("Control temperature precisely with six dual-stacked, sealed gas burners for higher highs, lower lows\n\nRely on a 15,000 Btu infrared griddle to sear burgers, stir-fry vegetables, and more\n\nEnjoy quicker heat and more even cooking with this large capacity gas convection oven\n\nMulti-task with an additional 18\" oven.\n\nClean up sloshes and spills easily with the seamless, sealed, black porcelain-coated burner pans\n\nProduce crisper crusts and faster sears with the powerful infrared interior broiler\n\nRe-ignites flame automatically with our spark ignition system for improved temperature control and added safety\n\nMove pots and pans easily across continuous cast-iron grates\n\nFind your kitchen style with a choice of iconic red, black, or brushed stainless control knobs\n\n\nSpecifications:\n\nOverall Dimensions: 47 7\/8\" W x 37\" H x 28 3\/8\" D\nOven 1 Interior Dimensions:\n13 1\/2\" W x 18 5\/8\" H x 17\" D\nOven 2 Interior Dimensions:\n24\" W x 18 5\/8\" H x 17\" D\nOven 1 Usable Capacity: 1.6 cubic feet\nOven 1 Overall Capacity: 2.5 cubic feet\nOven 2 Usable Capacity: 2.9 cubic feet\nOven 2 Overall Capacity: 4.4 cubic feet\nDoor Clearance: 19 1\/2\"\nStar-K Certified\nShipping Weight: 654 lbs\nReceptacle: 3-prong grounding-type\n", params);
 			if (hs!=this.ggText) {
@@ -14500,9 +14545,9 @@ function pano2vrSkin(player,base) {
 				if (this.ggUpdatePosition) this.ggUpdatePosition();
 			}
 		}
-		me._contents_ph.ggUpdateText();
+		me._contents_ph_land.ggUpdateText();
 		el.appendChild(els);
-		me._contents_ph.ggIsActive=function() {
+		me._contents_ph_land.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -14514,14 +14559,14 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._contents_ph.ggUpdatePosition=function (useTransition) {
+		me._contents_ph_land.ggUpdatePosition=function (useTransition) {
 		}
-		me._info_scroll_area_ph__content.appendChild(me._contents_ph);
-		me._productpanel_wolf_ph.appendChild(me._info_scroll_area_ph);
-		el=me._pp_close_b_ph=document.createElement('div');
-		els=me._pp_close_b_ph__img=document.createElement('img');
-		els.className='ggskin ggskin_pp_close_b_ph';
-		hs=basePath + 'images/pp_close_b_ph.png';
+		me._info_scroll_area_ph_land__content.appendChild(me._contents_ph_land);
+		me._productpanel_wolf_ph_land.appendChild(me._info_scroll_area_ph_land);
+		el=me._pp_close_b_ph_land=document.createElement('div');
+		els=me._pp_close_b_ph_land__img=document.createElement('img');
+		els.className='ggskin ggskin_pp_close_b_ph_land';
+		hs=basePath + 'images/pp_close_b_ph_land.png';
 		els.setAttribute('src',hs);
 		els.ggNormalSrc=hs;
 		hs ='';
@@ -14532,23 +14577,23 @@ function pano2vrSkin(player,base) {
 		player.checkLoaded.push(els);
 		el.appendChild(els);
 		el.ggSubElement = els;
-		el.ggId="PP_Close_B_PH";
+		el.ggId="PP_Close_B_PH_Land";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_image ";
 		el.ggType='image';
 		hs ='';
 		hs+='cursor : pointer;';
-		hs+='height : 35px;';
+		hs+='height : 21px;';
 		hs+='position : absolute;';
-		hs+='right : 10px;';
-		hs+='top : 11px;';
+		hs+='right : 5px;';
+		hs+='top : 5px;';
 		hs+='visibility : inherit;';
-		hs+='width : 100px;';
+		hs+='width : 60px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._pp_close_b_ph.ggIsActive=function() {
+		me._pp_close_b_ph_land.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -14560,14 +14605,14 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._pp_close_b_ph.onclick=function (e) {
+		me._pp_close_b_ph_land.onclick=function (e) {
 			if (player.transitionsDisabled) {
-				me._productpanel_wolf_ph.style.transition='none';
+				me._productpanel_wolf_ph_land.style.transition='none';
 			} else {
-				me._productpanel_wolf_ph.style.transition='all 500ms ease-out 0ms';
+				me._productpanel_wolf_ph_land.style.transition='all 500ms ease-out 0ms';
 			}
-			me._productpanel_wolf_ph.style.opacity='0';
-			me._productpanel_wolf_ph.style.visibility='hidden';
+			me._productpanel_wolf_ph_land.style.opacity='0';
+			me._productpanel_wolf_ph_land.style.visibility='hidden';
 			if (player.transitionsDisabled) {
 				me._screen_blur_ph.style.transition='none';
 			} else {
@@ -14586,13 +14631,13 @@ function pano2vrSkin(player,base) {
 			me._right_bottom_corner_panel_ph.style.visibility=(Number(me._right_bottom_corner_panel_ph.style.opacity)>0||!me._right_bottom_corner_panel_ph.style.opacity)?'inherit':'hidden';
 			me._right_bottom_corner_panel_ph.ggVisible=true;
 		}
-		me._pp_close_b_ph.ggUpdatePosition=function (useTransition) {
+		me._pp_close_b_ph_land.ggUpdatePosition=function (useTransition) {
 		}
-		me._productpanel_wolf_ph.appendChild(me._pp_close_b_ph);
-		el=me._pp_outside_close_ph=document.createElement('div');
-		el.ggId="PP_Outside_close_PH";
-		el.ggDx=0;
-		el.ggDy=0;
+		me._productpanel_wolf_ph_land.appendChild(me._pp_close_b_ph_land);
+		el=me._pp_outside_close_ph_land=document.createElement('div');
+		el.ggId="PP_Outside_close_PH_Land";
+		el.ggDx=62;
+		el.ggDy=-3;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_rectangle ";
@@ -14601,15 +14646,15 @@ function pano2vrSkin(player,base) {
 		hs+='z-index: -5;';
 		hs+='border : 0px solid #000000;';
 		hs+='height : 1100px;';
-		hs+='left : calc(50% - ((1940px + 0px) / 2) + 0px);';
+		hs+='left : calc(50% - ((1940px + 0px) / 2) + 62px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((1100px + 0px) / 2) + 0px);';
+		hs+='top : calc(50% - ((1100px + 0px) / 2) - 3px);';
 		hs+='visibility : inherit;';
 		hs+='width : 1940px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._pp_outside_close_ph.ggIsActive=function() {
+		me._pp_outside_close_ph_land.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -14621,14 +14666,14 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._pp_outside_close_ph.onclick=function (e) {
+		me._pp_outside_close_ph_land.onclick=function (e) {
 			if (player.transitionsDisabled) {
-				me._productpanel_wolf_ph.style.transition='none';
+				me._productpanel_wolf_ph_land.style.transition='none';
 			} else {
-				me._productpanel_wolf_ph.style.transition='all 500ms ease-out 0ms';
+				me._productpanel_wolf_ph_land.style.transition='all 500ms ease-out 0ms';
 			}
-			me._productpanel_wolf_ph.style.opacity='0';
-			me._productpanel_wolf_ph.style.visibility='hidden';
+			me._productpanel_wolf_ph_land.style.opacity='0';
+			me._productpanel_wolf_ph_land.style.visibility='hidden';
 			if (player.transitionsDisabled) {
 				me._screen_blur_ph.style.transition='none';
 			} else {
@@ -14647,15 +14692,923 @@ function pano2vrSkin(player,base) {
 			me._right_bottom_corner_panel_ph.style.visibility=(Number(me._right_bottom_corner_panel_ph.style.opacity)>0||!me._right_bottom_corner_panel_ph.style.opacity)?'inherit':'hidden';
 			me._right_bottom_corner_panel_ph.ggVisible=true;
 		}
-		me._pp_outside_close_ph.ggUpdatePosition=function (useTransition) {
+		me._pp_outside_close_ph_land.ggUpdatePosition=function (useTransition) {
 		}
-		me._productpanel_wolf_ph.appendChild(me._pp_outside_close_ph);
-		me._wolfrange_ph.appendChild(me._productpanel_wolf_ph);
-		el=me._text_tooltip_visit_site_ph=document.createElement('div');
-		els=me._text_tooltip_visit_site_ph__text=document.createElement('div');
+		me._productpanel_wolf_ph_land.appendChild(me._pp_outside_close_ph_land);
+		me._wolfrange_ph_landscape.appendChild(me._productpanel_wolf_ph_land);
+		el=me._productpanel_wolf_ph_port=document.createElement('div');
+		els=me._productpanel_wolf_ph_port__img=document.createElement('img');
+		els.className='ggskin ggskin_productpanel_wolf_ph_port';
+		hs=basePath + 'images/productpanel_wolf_ph_port.png';
+		els.setAttribute('src',hs);
+		els.ggNormalSrc=hs;
+		hs ='';
+		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
+		els.setAttribute('style', hs);
+		els.className='ggskin ggskin_image';
+		els['ondragstart']=function() { return false; };
+		player.checkLoaded.push(els);
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="ProductPanel_Wolf_PH_Port";
+		el.ggDx=0;
+		el.ggDy=0;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_image ";
+		el.ggType='image';
+		hs ='';
+		hs+='height : 600px;';
+		hs+='left : calc(50% - ((350px + 0px) / 2) + 0px);';
+		hs+='opacity : 0;';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((600px + 0px) / 2) + 0px);';
+		hs+='visibility : hidden;';
+		hs+='width : 350px;';
+		hs+='pointer-events:auto;';
+		hs+='backdrop-filter: blur(20px) grayscale(0%); -webkit-backdrop-filter: blur(20px) grayscale(0%);';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._productpanel_wolf_ph_port.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._productpanel_wolf_ph_port.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getVariableValue('Mobile_P') == true))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else if (
+				((player.getVariableValue('Mobile_L') == true))
+			)
+			{
+				newLogicStateVisible = 1;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._productpanel_wolf_ph_port.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._productpanel_wolf_ph_port.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._productpanel_wolf_ph_port.style.transition='';
+				if (me._productpanel_wolf_ph_port.ggCurrentLogicStateVisible == 0) {
+					me._productpanel_wolf_ph_port.style.visibility=(Number(me._productpanel_wolf_ph_port.style.opacity)>0||!me._productpanel_wolf_ph_port.style.opacity)?'inherit':'hidden';
+					me._productpanel_wolf_ph_port.ggVisible=true;
+				}
+				else if (me._productpanel_wolf_ph_port.ggCurrentLogicStateVisible == 1) {
+					me._productpanel_wolf_ph_port.style.visibility="hidden";
+					me._productpanel_wolf_ph_port.ggVisible=false;
+				}
+				else {
+					me._productpanel_wolf_ph_port.style.visibility=(Number(me._productpanel_wolf_ph_port.style.opacity)>0||!me._productpanel_wolf_ph_port.style.opacity)?'inherit':'hidden';
+					me._productpanel_wolf_ph_port.ggVisible=true;
+				}
+			}
+		}
+		me._productpanel_wolf_ph_port.logicBlock_visible();
+		me._productpanel_wolf_ph_port.ggUpdatePosition=function (useTransition) {
+		}
+		el=me._product_heading_ph_port=document.createElement('div');
+		els=me._product_heading_ph_port__text=document.createElement('div');
 		el.className='ggskin ggskin_textdiv';
 		el.ggTextDiv=els;
-		el.ggId="text_tooltip_Visit_site_PH";
+		el.ggId="Product heading_PH_Port";
+		el.ggDx=0;
+		el.ggDy=-45;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text tooltip";
+		el.ggType='text';
+		hs ='';
+		hs+='border : 0px solid #000000;';
+		hs+='color : rgba(255,255,255,1);';
+		hs+='height : 100px;';
+		hs+='left : calc(50% - ((300px + 0px) / 2) + 0px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((100px + 0px) / 2) - 45px);';
+		hs+='visibility : inherit;';
+		hs+='width : 300px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		hs ='';
+		hs += 'box-sizing: border-box;';
+		hs+='width: 100%;';
+		hs+='height: auto;';
+		hs+='max-height: 100%;';
+		hs+='font-size: 20px;';
+		hs+='font-weight: 600;';
+		hs+='text-align: center;';
+		hs+='position: absolute;';
+		hs+='top: 50%;';
+		hs+='transform: translate(0, -50%);';
+		hs+='white-space: pre;';
+		hs+='padding: 0px;';
+		hs+='overflow: hidden;';
+		els.setAttribute('style',hs);
+		me._product_heading_ph_port.ggUpdateText=function() {
+			var params = [];
+			var hs = player._("48\" Gas Range - 6 Burners and \nInfrared Charbroiler", params);
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._product_heading_ph_port.ggUpdateText();
+		el.appendChild(els);
+		me._product_heading_ph_port.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._product_heading_ph_port.ggUpdatePosition=function (useTransition) {
+		}
+		el=me._line_ph_port=document.createElement('div');
+		el.ggId="LIne_PH_Port";
+		el.ggDx=0;
+		el.ggDy=36;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_rectangle ";
+		el.ggType='rectangle';
+		hs ='';
+		hs+='background : #ffffff;';
+		hs+='border : 0px solid #000000;';
+		hs+='border-radius : 999px;';
+		hs+='height : 2px;';
+		hs+='left : calc(50% - ((300px + 0px) / 2) + 0px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((2px + 0px) / 2) + 36px);';
+		hs+='visibility : inherit;';
+		hs+='width : 300px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._line_ph_port.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._line_ph_port.ggUpdatePosition=function (useTransition) {
+		}
+		me._product_heading_ph_port.appendChild(me._line_ph_port);
+		me._productpanel_wolf_ph_port.appendChild(me._product_heading_ph_port);
+		el=me._product_brand_ph_port=document.createElement('div');
+		els=me._product_brand_ph_port__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Product Brand_PH_Port";
+		el.ggDx=0;
+		el.ggDy=-260;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text tooltip";
+		el.ggType='text';
+		hs ='';
+		hs+='border : 0px solid #000000;';
+		hs+='color : rgba(255,255,255,1);';
+		hs+='height : 40px;';
+		hs+='left : calc(50% - ((200px + 0px) / 2) + 0px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((40px + 0px) / 2) - 260px);';
+		hs+='visibility : inherit;';
+		hs+='width : 200px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		hs ='';
+		hs += 'box-sizing: border-box;';
+		hs+='width: 100%;';
+		hs+='height: auto;';
+		hs+='max-height: 100%;';
+		hs+='font-size: 25px;';
+		hs+='font-weight: 600;';
+		hs+='text-align: center;';
+		hs+='position: absolute;';
+		hs+='top: 50%;';
+		hs+='transform: translate(0, -50%);';
+		hs+='white-space: pre;';
+		hs+='padding: 0px;';
+		hs+='overflow: hidden;';
+		els.setAttribute('style',hs);
+		me._product_brand_ph_port.ggUpdateText=function() {
+			var params = [];
+			var hs = player._("WOLF", params);
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._product_brand_ph_port.ggUpdateText();
+		el.appendChild(els);
+		me._product_brand_ph_port.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._product_brand_ph_port.ggUpdatePosition=function (useTransition) {
+		}
+		me._productpanel_wolf_ph_port.appendChild(me._product_brand_ph_port);
+		el=me._wolf_ph_port=document.createElement('div');
+		els=me._wolf_ph_port__img=document.createElement('img');
+		els.className='ggskin ggskin_wolf_ph_port';
+		hs=basePath + 'images/wolf_ph_port.png';
+		els.setAttribute('src',hs);
+		els.ggNormalSrc=hs;
+		hs ='';
+		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
+		els.setAttribute('style', hs);
+		els.className='ggskin ggskin_image';
+		els['ondragstart']=function() { return false; };
+		player.checkLoaded.push(els);
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="Wolf_PH_Port";
+		el.ggDx=0;
+		el.ggDy=-160;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_image ";
+		el.ggType='image';
+		hs ='';
+		hs+='cursor : pointer;';
+		hs+='height : 149px;';
+		hs+='left : calc(50% - ((190px + 0px) / 2) + 0px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((149px + 0px) / 2) - 160px);';
+		hs+='visibility : inherit;';
+		hs+='width : 190px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._wolf_ph_port.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._wolf_ph_port.onclick=function (e) {
+			player.openUrl("https:\/\/www.subzero-wolf.com\/wolf\/ranges\/gas-range\/48-inch-gas-range-6-burners-infrared-griddle","_blank");
+		}
+		me._wolf_ph_port.ggUpdatePosition=function (useTransition) {
+		}
+		me._productpanel_wolf_ph_port.appendChild(me._wolf_ph_port);
+		el=me._info_scroll_area_ph_port=document.createElement('div');
+		els=me._info_scroll_area_ph_port__content=document.createElement('div');
+		els.className='ggskin ggskin_subelement ggskin_scrollarea';
+		el.ggContent=els;
+		el.appendChild(els);
+		el.ggHorScrollVisible = false;
+		el.ggVertScrollVisible = false;
+		el.ggContentLeftOffset = 0;
+		el.ggContentTopOffset = 0;
+		el.ggContentWidth = 0;
+		el.ggContentHeight = 0;
+		el.ggDragInertiaX = 0;
+		el.ggDragInertiaY = 0;
+		el.ggVPercentVisible = 1.0;
+		el.ggHPercentVisible = 1.0;
+		el.ggIsDragging = false;
+		hs ='';
+		hs+='height : 739px;';
+		hs+='left : 0px;';
+		hs+='overflow-x : visible;';
+		hs+='overflow-y : visible;';
+		hs+='position : absolute;';
+		hs+='top : 0px;';
+		hs+='width : 294px;';
+		hs+="";
+		els.setAttribute('style',hs);
+		me._info_scroll_area_ph_port.ggScrollByX = function(diffX) {
+			if(!me._info_scroll_area_ph_port.ggHorScrollVisible || diffX == 0 || me._info_scroll_area_ph_port.ggHPercentVisible >= 1.0) return;
+			me._info_scroll_area_ph_port.ggScrollPosX = (me._info_scroll_area_ph_port__horScrollFg.offsetLeft + diffX);
+			me._info_scroll_area_ph_port.ggScrollPosX = Math.max(me._info_scroll_area_ph_port.ggScrollPosX, 0);
+			me._info_scroll_area_ph_port.ggScrollPosX = Math.min(me._info_scroll_area_ph_port.ggScrollPosX, me._info_scroll_area_ph_port__horScrollBg.offsetWidth - me._info_scroll_area_ph_port__horScrollFg.offsetWidth);
+			me._info_scroll_area_ph_port__horScrollFg.style.left = me._info_scroll_area_ph_port.ggScrollPosX + 'px';
+			let percentScrolled = me._info_scroll_area_ph_port.ggScrollPosX / (me._info_scroll_area_ph_port__horScrollBg.offsetWidth - me._info_scroll_area_ph_port__horScrollFg.offsetWidth);
+			me._info_scroll_area_ph_port__content.style.left = -(Math.round((me._info_scroll_area_ph_port.ggContentWidth * (1.0 - me._info_scroll_area_ph_port.ggHPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_port.ggContentLeftOffset + 'px';
+			me._info_scroll_area_ph_port.ggScrollPosXPercent = (me._info_scroll_area_ph_port__horScrollFg.offsetLeft / me._info_scroll_area_ph_port__horScrollBg.offsetWidth);
+		}
+		me._info_scroll_area_ph_port.ggScrollByXSmooth = function(diffX) {
+			if(!me._info_scroll_area_ph_port.ggHorScrollVisible || diffX == 0 || me._info_scroll_area_ph_port.ggHPercentVisible >= 1.0) return;
+			var scrollPerInterval = diffX / 25;
+			var scrollCurrX = 0;
+			var id = setInterval(function() {
+				scrollCurrX += scrollPerInterval;
+				me._info_scroll_area_ph_port.ggScrollPosX += scrollPerInterval;
+				if (diffX > 0 && (scrollCurrX >= diffX || me._info_scroll_area_ph_port.ggScrollPosX >= me._info_scroll_area_ph_port__horScrollBg.offsetWidth - me._info_scroll_area_ph_port__horScrollFg.offsetWidth)) {
+					me._info_scroll_area_ph_port.ggScrollPosX = Math.min(me._info_scroll_area_ph_port.ggScrollPosX, me._info_scroll_area_ph_port__horScrollBg.offsetWidth - me._info_scroll_area_ph_port__horScrollFg.offsetWidth);
+					clearInterval(id);
+				}
+				if (diffX < 0 && (scrollCurrX <= diffX || me._info_scroll_area_ph_port.ggScrollPosX <= 0)) {
+					me._info_scroll_area_ph_port.ggScrollPosX = Math.max(me._info_scroll_area_ph_port.ggScrollPosX, 0);
+					clearInterval(id);
+				}
+			me._info_scroll_area_ph_port__horScrollFg.style.left = me._info_scroll_area_ph_port.ggScrollPosX + 'px';
+			let percentScrolled = me._info_scroll_area_ph_port.ggScrollPosX / (me._info_scroll_area_ph_port__horScrollBg.offsetWidth - me._info_scroll_area_ph_port__horScrollFg.offsetWidth);
+			me._info_scroll_area_ph_port__content.style.left = -(Math.round((me._info_scroll_area_ph_port.ggContentWidth * (1.0 - me._info_scroll_area_ph_port.ggHPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_port.ggContentLeftOffset + 'px';
+			me._info_scroll_area_ph_port.ggScrollPosXPercent = (me._info_scroll_area_ph_port__horScrollFg.offsetLeft / me._info_scroll_area_ph_port__horScrollBg.offsetWidth);
+			}, 10);
+		}
+		me._info_scroll_area_ph_port.ggScrollByY = function(diffY) {
+			if(!me._info_scroll_area_ph_port.ggVertScrollVisible || diffY == 0 || me._info_scroll_area_ph_port.ggVPercentVisible >= 1.0) return;
+			me._info_scroll_area_ph_port.ggScrollPosY = (me._info_scroll_area_ph_port__vertScrollFg.offsetTop + diffY);
+			me._info_scroll_area_ph_port.ggScrollPosY = Math.max(me._info_scroll_area_ph_port.ggScrollPosY, 0);
+			me._info_scroll_area_ph_port.ggScrollPosY = Math.min(me._info_scroll_area_ph_port.ggScrollPosY, me._info_scroll_area_ph_port__vertScrollBg.offsetHeight - me._info_scroll_area_ph_port__vertScrollFg.offsetHeight);
+			me._info_scroll_area_ph_port__vertScrollFg.style.top = me._info_scroll_area_ph_port.ggScrollPosY + 'px';
+			let percentScrolled = me._info_scroll_area_ph_port.ggScrollPosY / (me._info_scroll_area_ph_port__vertScrollBg.offsetHeight - me._info_scroll_area_ph_port__vertScrollFg.offsetHeight);
+			me._info_scroll_area_ph_port__content.style.top = -(Math.round((me._info_scroll_area_ph_port.ggContentHeight * (1.0 - me._info_scroll_area_ph_port.ggVPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_port.ggContentTopOffset + 'px';
+			me._info_scroll_area_ph_port.ggScrollPosYPercent = (me._info_scroll_area_ph_port__vertScrollFg.offsetTop / me._info_scroll_area_ph_port__vertScrollBg.offsetHeight);
+		}
+		me._info_scroll_area_ph_port.ggScrollByYSmooth = function(diffY) {
+			if(!me._info_scroll_area_ph_port.ggVertScrollVisible || diffY == 0 || me._info_scroll_area_ph_port.ggVPercentVisible >= 1.0) return;
+			var scrollPerInterval = diffY / 25;
+			var scrollCurrY = 0;
+			var id = setInterval(function() {
+				scrollCurrY += scrollPerInterval;
+				me._info_scroll_area_ph_port.ggScrollPosY += scrollPerInterval;
+				if (diffY > 0 && (scrollCurrY >= diffY || me._info_scroll_area_ph_port.ggScrollPosY >= me._info_scroll_area_ph_port__vertScrollBg.offsetHeight - me._info_scroll_area_ph_port__vertScrollFg.offsetHeight)) {
+					me._info_scroll_area_ph_port.ggScrollPosY = Math.min(me._info_scroll_area_ph_port.ggScrollPosY, me._info_scroll_area_ph_port__vertScrollBg.offsetHeight - me._info_scroll_area_ph_port__vertScrollFg.offsetHeight);
+					clearInterval(id);
+				}
+				if (diffY < 0 && (scrollCurrY <= diffY || me._info_scroll_area_ph_port.ggScrollPosY <= 0)) {
+					me._info_scroll_area_ph_port.ggScrollPosY = Math.max(me._info_scroll_area_ph_port.ggScrollPosY, 0);
+					clearInterval(id);
+				}
+			me._info_scroll_area_ph_port__vertScrollFg.style.top = me._info_scroll_area_ph_port.ggScrollPosY + 'px';
+			let percentScrolled = me._info_scroll_area_ph_port.ggScrollPosY / (me._info_scroll_area_ph_port__vertScrollBg.offsetHeight - me._info_scroll_area_ph_port__vertScrollFg.offsetHeight);
+			me._info_scroll_area_ph_port__content.style.top = -(Math.round((me._info_scroll_area_ph_port.ggContentHeight * (1.0 - me._info_scroll_area_ph_port.ggVPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_port.ggContentTopOffset + 'px';
+			me._info_scroll_area_ph_port.ggScrollPosYPercent = (me._info_scroll_area_ph_port__vertScrollFg.offsetTop / me._info_scroll_area_ph_port__vertScrollBg.offsetHeight);
+			}, 10);
+		}
+		me._info_scroll_area_ph_port.ggScrollIntoView = function(posX, posY, width, height) {
+			if (me._info_scroll_area_ph_port.ggHorScrollVisible) {
+				if (posX < 0) {
+					var diffX = Math.floor(posX * me._info_scroll_area_ph_port.ggHPercentVisible);
+					me._info_scroll_area_ph_port.ggScrollByXSmooth(diffX);
+				} else if (posX + width > me._info_scroll_area_ph_port.clientWidth - (me._info_scroll_area_ph_port.ggVertScrollVisible ? 2 : 0)) {
+					var diffX = Math.ceil(((posX + width) - (me._info_scroll_area_ph_port.clientWidth - (me._info_scroll_area_ph_port.ggVertScrollVisible ? 2 : 0))) * me._info_scroll_area_ph_port.ggHPercentVisible);
+					me._info_scroll_area_ph_port.ggScrollByXSmooth(diffX);
+				}
+			}
+			if (me._info_scroll_area_ph_port.ggVertScrollVisible) {
+				if (posY < 0) {
+					var diffY = Math.floor(posY * me._info_scroll_area_ph_port.ggVPercentVisible);
+					me._info_scroll_area_ph_port.ggScrollByYSmooth(diffY);
+				} else if (posY + height > me._info_scroll_area_ph_port.clientHeight - (me._info_scroll_area_ph_port.ggHorScrollVisible ? 2 : 0)) {
+					var diffY = Math.ceil(((posY + height) - (me._info_scroll_area_ph_port.clientHeight - (me._info_scroll_area_ph_port.ggHorScrollVisible ? 2 : 0))) * me._info_scroll_area_ph_port.ggVPercentVisible);
+					me._info_scroll_area_ph_port.ggScrollByYSmooth(diffY);
+				}
+			}
+		}
+		me._info_scroll_area_ph_port__content.mousetouchend = e => {
+			let inertiaInterval = setInterval(function() {
+				me._info_scroll_area_ph_port.ggDragInertiaX *= 0.96;
+				me._info_scroll_area_ph_port.ggDragInertiaY *= 0.96;
+				me._info_scroll_area_ph_port.ggScrollByX(me._info_scroll_area_ph_port.ggDragInertiaX);
+				me._info_scroll_area_ph_port.ggScrollByY(me._info_scroll_area_ph_port.ggDragInertiaY);
+				if (Math.abs(me._info_scroll_area_ph_port.ggDragInertiaX) < 1.0 && Math.abs(me._info_scroll_area_ph_port.ggDragInertiaY) < 1.0) {
+					clearInterval(inertiaInterval);
+				}
+				}, 10);
+			me._info_scroll_area_ph_port__content.onmouseup = null;
+			me._info_scroll_area_ph_port__content.onmousemove = null;
+			me._info_scroll_area_ph_port__content.ontouchend = null;
+			me._info_scroll_area_ph_port__content.ontouchmove = null;
+			me._info_scroll_area_ph_port__content.onpointerup = null;
+			me._info_scroll_area_ph_port__content.onpointermove = null;
+			setTimeout(function() { me._info_scroll_area_ph_port.ggIsDragging = false; }, 100);
+		}
+		me._info_scroll_area_ph_port__content.mousetouchmove = e => {
+			e = e || window.event;
+			e.preventDefault();
+			var t = e.touches;
+			var eventX = t ? t[0].clientX : e.clientX;
+			var eventY = t ? t[0].clientY : e.clientY;
+			if (Math.abs(eventX - me._info_scroll_area_ph_port.ggDragStartX) > 10 || Math.abs(eventY - me._info_scroll_area_ph_port.ggDragStartY) > 10) me._info_scroll_area_ph_port.ggIsDragging = true;
+			var diffX = (eventX - me._info_scroll_area_ph_port.ggDragLastX) * me._info_scroll_area_ph_port.ggHPercentVisible;
+			var diffY = (eventY - me._info_scroll_area_ph_port.ggDragLastY) * me._info_scroll_area_ph_port.ggVPercentVisible;
+			me._info_scroll_area_ph_port.ggDragInertiaX = -diffX;
+			me._info_scroll_area_ph_port.ggDragInertiaY = -diffY;
+			me._info_scroll_area_ph_port.ggDragLastX = eventX;
+			me._info_scroll_area_ph_port.ggDragLastY = eventY;
+			me._info_scroll_area_ph_port.ggScrollByX(-diffX);
+			me._info_scroll_area_ph_port.ggScrollByY(-diffY);
+		}
+		me._info_scroll_area_ph_port__content.mousetouchstart = e => {
+			e = e || window.event;
+			var t = e.touches;
+			me._info_scroll_area_ph_port.ggDragLastX = me._info_scroll_area_ph_port.ggDragStartX = t ? t[0].clientX : e.clientX;
+			me._info_scroll_area_ph_port.ggDragLastY = me._info_scroll_area_ph_port.ggDragStartY = t ? t[0].clientY : e.clientY;
+			me._info_scroll_area_ph_port__content.onmouseup = me._info_scroll_area_ph_port__content.mousetouchend;
+			me._info_scroll_area_ph_port__content.ontouchend = me._info_scroll_area_ph_port__content.mousetouchend;
+			me._info_scroll_area_ph_port__content.onmousemove = me._info_scroll_area_ph_port__content.mousetouchmove;
+			me._info_scroll_area_ph_port__content.ontouchmove = me._info_scroll_area_ph_port__content.mousetouchmove;
+			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
+				me._info_scroll_area_ph_port__content.onpointerup = me._info_scroll_area_ph_port__content.ontouchend;
+				me._info_scroll_area_ph_port__content.onpointermove = me._info_scroll_area_ph_port__content.ontouchmove;
+			}
+		}
+		els.onmousedown = me._info_scroll_area_ph_port__content.mousetouchstart;
+		els.ontouchstart = me._info_scroll_area_ph_port__content.mousetouchstart;
+		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
+			els.onpointerdown = me._info_scroll_area_ph_port__content.mousetouchstart;
+		}
+		elVertScrollBg = me._info_scroll_area_ph_port__vertScrollBg = document.createElement('div');
+		el.appendChild(elVertScrollBg);
+		elVertScrollBg.setAttribute('style', 'position: absolute; right: 0px; top: 0px; visibility: hidden; width: 2px; height: 280px; background-color: rgba(128,128,128,0.196078); pointer-events: auto;');
+		elVertScrollBg.className='ggskin ggskin_scrollarea_vscrollbg';
+		elVertScrollFg = me._info_scroll_area_ph_port__vertScrollFg = document.createElement('div');
+		elVertScrollBg.appendChild(elVertScrollFg);
+		elVertScrollFg.setAttribute('style', 'position: absolute; left: 0px; top: 0px; visibility: hidden; width: 2px; height: 280px; background-color: rgba(192,192,192,0.196078); pointer-events: auto;');
+		elVertScrollFg.className='ggskin ggskin_scrollarea_vscrollfg';
+		me._info_scroll_area_ph_port.ggScrollPosY = 0;
+		me._info_scroll_area_ph_port.ggScrollPosYPercent = 0.0;
+		elVertScrollFg.onmousedown = function(e) {
+			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) return;
+			e = e || window.event;
+			e.preventDefault();
+			e.stopPropagation();
+			me._info_scroll_area_ph_port.ggDragLastY = e.clientY;
+			document.onmouseup = function() {
+				let inertiaInterval = setInterval(function() {
+					me._info_scroll_area_ph_port.ggDragInertiaY *= 0.96;
+					me._info_scroll_area_ph_port.ggScrollByY(me._info_scroll_area_ph_port.ggDragInertiaY);
+					if (Math.abs(me._info_scroll_area_ph_port.ggDragInertiaY) < 1.0) {
+						clearInterval(inertiaInterval);
+					}
+					}, 10);
+				document.onmouseup = null;
+				document.onmousemove = null;
+			}
+			document.onmousemove = function(e) {
+				e = e || window.event;
+				e.preventDefault();
+				var diffY = e.clientY - me._info_scroll_area_ph_port.ggDragLastY;
+				me._info_scroll_area_ph_port.ggDragInertiaY = diffY;
+				me._info_scroll_area_ph_port.ggDragLastY = e.clientY;
+				me._info_scroll_area_ph_port.ggScrollByY(diffY);
+			}
+		}
+		elVertScrollFg.ontouchstart = function(e) {
+			e = e || window.event;
+			e.preventDefault();
+			e.stopPropagation();
+			var t = e.touches;
+			me._info_scroll_area_ph_port.ggDragLastY = t ? t[0].clientY : e.clientY;
+			document.ontouchend = function() {
+				let inertiaInterval = setInterval(function() {
+					me._info_scroll_area_ph_port.ggDragInertiaY *= 0.96;
+					me._info_scroll_area_ph_port.ggScrollByY(me._info_scroll_area_ph_port.ggDragInertiaY);
+					if (Math.abs(me._info_scroll_area_ph_port.ggDragInertiaY) < 1.0) {
+						clearInterval(inertiaInterval);
+					}
+					}, 10);
+				document.ontouchend = null;
+				document.ontouchmove = null;
+				document.onpointerup = null;
+				document.onpointermove = null;
+			}
+			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
+				document.onpointerup = document.ontouchend;
+			}
+			document.ontouchmove = function(e) {
+				e = e || window.event;
+				e.preventDefault();
+				var t = e.touches;
+				var diffY = (t ? t[0].clientY : e.clientY) - me._info_scroll_area_ph_port.ggDragLastY;
+				me._info_scroll_area_ph_port.ggDragInertiaY = diffY;
+				me._info_scroll_area_ph_port.ggDragLastY = t ? t[0].clientY : e.clientY;
+				me._info_scroll_area_ph_port.ggScrollByY(diffY);
+			}
+			if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
+				document.onpointermove = document.ontouchmove;
+			}
+		}
+		if (player.getOS() == 1 && navigator.maxTouchPoints > 0) {
+			elVertScrollFg.onpointerdown = elVertScrollFg.ontouchstart;
+		}
+		elVertScrollBg.onmousedown = function(e) {
+			e = e || window.event;
+			e.preventDefault();
+			var diffY = me._info_scroll_area_ph_port.ggScrollHeight;
+			if (e.offsetY < me._info_scroll_area_ph_port.ggScrollPosY) {
+				diffY = diffY * -1;
+			}
+			me._info_scroll_area_ph_port.ggScrollByYSmooth(diffY);
+		}
+		elVertScrollBg.ontouchstart = function(e) {
+			e = e || window.event;
+			e.preventDefault();
+			e.stopPropagation();
+			var t = e.touches;
+			var rect = me._info_scroll_area_ph_port__vertScrollBg.getBoundingClientRect();
+			var diffY = me._info_scroll_area_ph_port.ggScrollHeight;
+			if ((t[0].clientY - rect.top) < me._info_scroll_area_ph_port.ggScrollPosY) {
+				diffY = diffY * -1;
+			}
+			me._info_scroll_area_ph_port.ggScrollByYSmooth(diffY);
+		}
+		el.addEventListener('wheel', function(e) {
+			e.preventDefault();
+			var wheelDelta = Math.sign(e.deltaY);
+			me._info_scroll_area_ph_port.ggScrollByYSmooth(30 * me._info_scroll_area_ph_port.ggVPercentVisible * wheelDelta);
+		});
+		elCornerBg = me._info_scroll_area_ph_port__cornerBg = document.createElement('div');
+		el.appendChild(elCornerBg);
+		elCornerBg.setAttribute('style', 'position: absolute; right: 0px; bottom: 0px; visibility: hidden; width: 2px; height: 2px; background-color: rgba(255,255,255,0.392157);');
+		elCornerBg.className='ggskin ggskin_scrollarea_scrollcorner';
+		el.ggId="Info scroll area_PH_Port";
+		el.ggDx=0;
+		el.ggDy=140;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_scrollarea ";
+		el.ggType='scrollarea';
+		hs ='';
+		hs+='background : rgba(255,255,255,0);';
+		hs+='border : 0px solid #000000;';
+		hs+='height : 280px;';
+		hs+='left : calc(50% - ((300px + 0px) / 2) + 0px);';
+		hs+='overflow : hidden;';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((280px + 0px) / 2) + 140px);';
+		hs+='visibility : inherit;';
+		hs+='width : 300px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._info_scroll_area_ph_port.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._info_scroll_area_ph_port.ggUpdatePosition=function (useTransition) {
+			{
+				var horScrollWasVisible = this.ggHorScrollVisible;
+				var vertScrollWasVisible = this.ggVertScrollVisible;
+				this.ggContent.style.left = '0px';
+				this.ggContent.style.top = '0px';
+				this.ggContentLeftOffset = 0;
+				this.ggContentTopOffset = 0;
+				var offsetWidthWithScale = this.getBoundingClientRect().width;
+				var offsetHeightWithScale = this.getBoundingClientRect().height;
+				var domRectContent = this.ggContent.getBoundingClientRect();
+				var minX = 0;
+				var minY = 0;
+				var maxX = 0;
+				var maxY = 0;
+				var stack=[];
+				stack.push(this.ggContent);
+				while(stack.length>0) {
+					var e=stack.pop();
+					if (e!=this.ggContent && e.getBoundingClientRect && e.style['display']!='none' && (e.offsetWidth != 0 || e.offsetHeight != 0)) {
+						var domRectChild = e.getBoundingClientRect();
+						var diffX = domRectChild.left - domRectContent.left;
+						minX = Math.min(minX, diffX);
+						maxX = Math.max(maxX, diffX + domRectChild.width);
+						var diffY = domRectChild.top - domRectContent.top;
+						minY = Math.min(minY, diffY);
+						maxY = Math.max(maxY, diffY + domRectChild.height);
+					}
+					if (e.hasChildNodes() && e.style['display']!='none' && e.style['overflow']!='hidden') {
+						for(var i=0;i<e.childNodes.length;i++) {
+							stack.push(e.childNodes[i]);
+						}
+					}
+				}
+				if (minX < 0) this.ggContentLeftOffset = -minX;
+				if (minY < 0) this.ggContentTopOffset = -minY;
+				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
+				this.ggContent.style.top = this.ggContentTopOffset + 'px';
+				var contentWidth = maxX - minX;
+				this.ggContent.style.width = contentWidth + 'px';
+				var contentHeight = maxY - minY;
+				this.ggContent.style.height = contentHeight + 'px';
+			var scaleX = this.getBoundingClientRect().width / this.offsetWidth;
+				this.ggContentWidth = contentWidth / scaleX;
+			var scaleY = this.getBoundingClientRect().height / this.offsetHeight;
+				this.ggContentHeight = contentHeight / scaleY;
+				this.ggContent.style.left = this.ggContentLeftOffset + 'px';
+				this.ggContent.style.marginLeft = '0px';
+				this.ggContent.style.top = -(Math.round(me._info_scroll_area_ph_port.ggScrollPosY / me._info_scroll_area_ph_port.ggVPercentVisible)) + this.ggContentTopOffset + 'px';
+				this.ggContent.style.marginTop = '0px';
+				me._info_scroll_area_ph_port__vertScrollBg.style.visibility = 'inherit';
+				me._info_scroll_area_ph_port__vertScrollFg.style.visibility = 'inherit';
+				me._info_scroll_area_ph_port.ggVertScrollVisible = true;
+				if(me._info_scroll_area_ph_port.ggVertScrollVisible) {
+					me._info_scroll_area_ph_port.ggAvailableWidth = me._info_scroll_area_ph_port.clientWidth - 2;
+					if (me._info_scroll_area_ph_port.ggHorScrollVisible) {
+						me._info_scroll_area_ph_port.ggAvailableHeight = me._info_scroll_area_ph_port.clientHeight - 2;
+						me._info_scroll_area_ph_port.ggAvailableHeightWithScale = me._info_scroll_area_ph_port.getBoundingClientRect().height - me._info_scroll_area_ph_port__vertScrollBg.getBoundingClientRect().width;
+						me._info_scroll_area_ph_port__cornerBg.style.visibility = 'inherit';
+					} else {
+						me._info_scroll_area_ph_port.ggAvailableHeight = me._info_scroll_area_ph_port.clientHeight;
+						me._info_scroll_area_ph_port.ggAvailableHeightWithScale = me._info_scroll_area_ph_port.getBoundingClientRect().height;
+						me._info_scroll_area_ph_port__cornerBg.style.visibility = 'hidden';
+					}
+					me._info_scroll_area_ph_port__vertScrollBg.style.height = me._info_scroll_area_ph_port.ggAvailableHeight + 'px';
+					me._info_scroll_area_ph_port.ggVPercentVisible = contentHeight != 0 ? me._info_scroll_area_ph_port.ggAvailableHeightWithScale / contentHeight : 0.0;
+					if (me._info_scroll_area_ph_port.ggVPercentVisible > 1.0) me._info_scroll_area_ph_port.ggVPercentVisible = 1.0;
+					me._info_scroll_area_ph_port.ggScrollHeight =  Math.round(me._info_scroll_area_ph_port__vertScrollBg.offsetHeight * me._info_scroll_area_ph_port.ggVPercentVisible);
+					me._info_scroll_area_ph_port__vertScrollFg.style.height = me._info_scroll_area_ph_port.ggScrollHeight + 'px';
+					me._info_scroll_area_ph_port.ggScrollPosY = me._info_scroll_area_ph_port.ggScrollPosYPercent * me._info_scroll_area_ph_port.ggAvailableHeight;
+					me._info_scroll_area_ph_port.ggScrollPosY = Math.min(me._info_scroll_area_ph_port.ggScrollPosY, me._info_scroll_area_ph_port__vertScrollBg.offsetHeight - me._info_scroll_area_ph_port__vertScrollFg.offsetHeight);
+					me._info_scroll_area_ph_port__vertScrollFg.style.top = me._info_scroll_area_ph_port.ggScrollPosY + 'px';
+					if (me._info_scroll_area_ph_port.ggVPercentVisible < 1.0) {
+						let percentScrolled = me._info_scroll_area_ph_port.ggScrollPosY / (me._info_scroll_area_ph_port__vertScrollBg.offsetHeight - me._info_scroll_area_ph_port__vertScrollFg.offsetHeight);
+						me._info_scroll_area_ph_port__content.style.top = -(Math.round((me._info_scroll_area_ph_port.ggContentHeight * (1.0 - me._info_scroll_area_ph_port.ggVPercentVisible)) * percentScrolled)) + me._info_scroll_area_ph_port.ggContentTopOffset + 'px';
+					}
+				} else {
+					me._info_scroll_area_ph_port.ggAvailableWidth = me._info_scroll_area_ph_port.clientWidth;
+					me._info_scroll_area_ph_port.ggScrollPosY = 0;
+					me._info_scroll_area_ph_port.ggScrollPosYPercent = 0.0;
+					me._info_scroll_area_ph_port__content.style.top = this.ggContentTopOffset + 'px';
+					me._info_scroll_area_ph_port__cornerBg.style.visibility = 'hidden';
+				}
+				if(horScrollWasVisible != me._info_scroll_area_ph_port.ggHorScrollVisible || vertScrollWasVisible != me._info_scroll_area_ph_port.ggVertScrollVisible) {
+					skin.updateSize(me._info_scroll_area_ph_port);
+					me._info_scroll_area_ph_port.ggUpdatePosition();
+				}
+			}
+		}
+		el=me._contents_ph_port=document.createElement('div');
+		el.isDragging = function() {
+			let scrollerParent = me._contents_ph_port;
+			while ((scrollerParent = scrollerParent.parentNode) != null) {
+				if (scrollerParent.hasOwnProperty('ggIsDragging') && scrollerParent.ggIsDragging == true) return true;
+			}
+			return false;
+		}
+		els=me._contents_ph_port__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="Contents_PH_Port";
+		el.ggDx=0;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_text ";
+		el.ggType='text';
+		hs ='';
+		hs+='border : 0px solid #000000;';
+		hs+='color : rgba(255,255,255,1);';
+		hs+='height : 740px;';
+		hs+='left : calc(50% - ((290px + 0px) / 2) + 0px);';
+		hs+='position : absolute;';
+		hs+='top : 0px;';
+		hs+='visibility : inherit;';
+		hs+='width : 290px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		hs ='';
+		hs += 'box-sizing: border-box;';
+		hs+='width: 100%;';
+		hs+='height: 100%;';
+		hs+='font-size: 12px;';
+		hs+='font-weight: normal;';
+		hs+='text-align: justify;';
+		hs+='white-space: pre-line;';
+		hs+='padding: 0px;';
+		hs+='overflow: hidden;';
+		hs+='overflow-y: auto;';
+		els.setAttribute('style',hs);
+		me._contents_ph_port.ggUpdateText=function() {
+			var params = [];
+			var hs = player._("Control temperature precisely with six dual-stacked, sealed gas burners for higher highs, lower lows\n\nRely on a 15,000 Btu infrared griddle to sear burgers, stir-fry vegetables, and more\n\nEnjoy quicker heat and more even cooking with this large capacity gas convection oven\n\nMulti-task with an additional 18\" oven.\n\nClean up sloshes and spills easily with the seamless, sealed, black porcelain-coated burner pans\n\nProduce crisper crusts and faster sears with the powerful infrared interior broiler\n\nRe-ignites flame automatically with our spark ignition system for improved temperature control and added safety\n\nMove pots and pans easily across continuous cast-iron grates\n\nFind your kitchen style with a choice of iconic red, black, or brushed stainless control knobs\n\n\nSpecifications:\n\nOverall Dimensions: 47 7\/8\" W x 37\" H x 28 3\/8\" D\nOven 1 Interior Dimensions:\n13 1\/2\" W x 18 5\/8\" H x 17\" D\nOven 2 Interior Dimensions:\n24\" W x 18 5\/8\" H x 17\" D\nOven 1 Usable Capacity: 1.6 cubic feet\nOven 1 Overall Capacity: 2.5 cubic feet\nOven 2 Usable Capacity: 2.9 cubic feet\nOven 2 Overall Capacity: 4.4 cubic feet\nDoor Clearance: 19 1\/2\"\nStar-K Certified\nShipping Weight: 654 lbs\nReceptacle: 3-prong grounding-type\n", params);
+			if (hs!=this.ggText) {
+				this.ggText=hs;
+				this.ggTextDiv.innerHTML=hs;
+				if (this.ggUpdatePosition) this.ggUpdatePosition();
+			}
+		}
+		me._contents_ph_port.ggUpdateText();
+		el.appendChild(els);
+		me._contents_ph_port.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._contents_ph_port.ggUpdatePosition=function (useTransition) {
+		}
+		me._info_scroll_area_ph_port__content.appendChild(me._contents_ph_port);
+		me._productpanel_wolf_ph_port.appendChild(me._info_scroll_area_ph_port);
+		el=me._pp_close_b_ph_port=document.createElement('div');
+		els=me._pp_close_b_ph_port__img=document.createElement('img');
+		els.className='ggskin ggskin_pp_close_b_ph_port';
+		hs=basePath + 'images/pp_close_b_ph_port.png';
+		els.setAttribute('src',hs);
+		els.ggNormalSrc=hs;
+		hs ='';
+		hs += 'position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;;';
+		els.setAttribute('style', hs);
+		els.className='ggskin ggskin_image';
+		els['ondragstart']=function() { return false; };
+		player.checkLoaded.push(els);
+		el.appendChild(els);
+		el.ggSubElement = els;
+		el.ggId="PP_Close_B_PH_Port";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_image ";
+		el.ggType='image';
+		hs ='';
+		hs+='cursor : pointer;';
+		hs+='height : 21px;';
+		hs+='position : absolute;';
+		hs+='right : 5px;';
+		hs+='top : 5px;';
+		hs+='visibility : inherit;';
+		hs+='width : 60px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._pp_close_b_ph_port.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._pp_close_b_ph_port.logicBlock_position = function() {
+			var newLogicStatePosition;
+			if (
+				((player.getVariableValue('Mobile_L') == true))
+			)
+			{
+				newLogicStatePosition = 0;
+			}
+			else {
+				newLogicStatePosition = -1;
+			}
+			if (me._pp_close_b_ph_port.ggCurrentLogicStatePosition != newLogicStatePosition) {
+				me._pp_close_b_ph_port.ggCurrentLogicStatePosition = newLogicStatePosition;
+				me._pp_close_b_ph_port.style.transition='right 0s, top 0s';
+				if (me._pp_close_b_ph_port.ggCurrentLogicStatePosition == 0) {
+					me._pp_close_b_ph_port.style.right='5px';
+					me._pp_close_b_ph_port.style.top='5px';
+				}
+				else {
+					me._pp_close_b_ph_port.style.right='5px';
+					me._pp_close_b_ph_port.style.top='5px';
+				}
+			}
+		}
+		me._pp_close_b_ph_port.logicBlock_position();
+		me._pp_close_b_ph_port.onclick=function (e) {
+			if (player.transitionsDisabled) {
+				me._productpanel_wolf_ph_port.style.transition='none';
+			} else {
+				me._productpanel_wolf_ph_port.style.transition='all 500ms ease-out 0ms';
+			}
+			me._productpanel_wolf_ph_port.style.opacity='0';
+			me._productpanel_wolf_ph_port.style.visibility='hidden';
+			if (player.transitionsDisabled) {
+				me._screen_blur_ph.style.transition='none';
+			} else {
+				me._screen_blur_ph.style.transition='all 0ms ease 0ms';
+			}
+			me._screen_blur_ph.style.opacity='0';
+			me._screen_blur_ph.style.visibility='hidden';
+			player.setVariableValue('Hotspot_Visibility', true);
+			me._left_bottom_corner_panel_ph.style.transition='none';
+			me._left_bottom_corner_panel_ph.style.visibility=(Number(me._left_bottom_corner_panel_ph.style.opacity)>0||!me._left_bottom_corner_panel_ph.style.opacity)?'inherit':'hidden';
+			me._left_bottom_corner_panel_ph.ggVisible=true;
+			me._right_top_corner_panel_ph.style.transition='none';
+			me._right_top_corner_panel_ph.style.visibility=(Number(me._right_top_corner_panel_ph.style.opacity)>0||!me._right_top_corner_panel_ph.style.opacity)?'inherit':'hidden';
+			me._right_top_corner_panel_ph.ggVisible=true;
+			me._right_bottom_corner_panel_ph.style.transition='none';
+			me._right_bottom_corner_panel_ph.style.visibility=(Number(me._right_bottom_corner_panel_ph.style.opacity)>0||!me._right_bottom_corner_panel_ph.style.opacity)?'inherit':'hidden';
+			me._right_bottom_corner_panel_ph.ggVisible=true;
+		}
+		me._pp_close_b_ph_port.ggUpdatePosition=function (useTransition) {
+		}
+		me._productpanel_wolf_ph_port.appendChild(me._pp_close_b_ph_port);
+		el=me._pp_outside_close_ph_port=document.createElement('div');
+		el.ggId="PP_Outside_close_PH_Port";
+		el.ggDx=62;
+		el.ggDy=-3;
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_rectangle ";
+		el.ggType='rectangle';
+		hs ='';
+		hs+='z-index: -5;';
+		hs+='border : 0px solid #000000;';
+		hs+='height : 1100px;';
+		hs+='left : calc(50% - ((1940px + 0px) / 2) + 62px);';
+		hs+='position : absolute;';
+		hs+='top : calc(50% - ((1100px + 0px) / 2) - 3px);';
+		hs+='visibility : inherit;';
+		hs+='width : 1940px;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._pp_outside_close_ph_port.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._pp_outside_close_ph_port.onclick=function (e) {
+			if (player.transitionsDisabled) {
+				me._productpanel_wolf_ph_port.style.transition='none';
+			} else {
+				me._productpanel_wolf_ph_port.style.transition='all 500ms ease-out 0ms';
+			}
+			me._productpanel_wolf_ph_port.style.opacity='0';
+			me._productpanel_wolf_ph_port.style.visibility='hidden';
+			if (player.transitionsDisabled) {
+				me._screen_blur_ph.style.transition='none';
+			} else {
+				me._screen_blur_ph.style.transition='all 0ms ease 0ms';
+			}
+			me._screen_blur_ph.style.opacity='0';
+			me._screen_blur_ph.style.visibility='hidden';
+			player.setVariableValue('Hotspot_Visibility', true);
+			me._left_bottom_corner_panel_ph.style.transition='none';
+			me._left_bottom_corner_panel_ph.style.visibility=(Number(me._left_bottom_corner_panel_ph.style.opacity)>0||!me._left_bottom_corner_panel_ph.style.opacity)?'inherit':'hidden';
+			me._left_bottom_corner_panel_ph.ggVisible=true;
+			me._right_top_corner_panel_ph.style.transition='none';
+			me._right_top_corner_panel_ph.style.visibility=(Number(me._right_top_corner_panel_ph.style.opacity)>0||!me._right_top_corner_panel_ph.style.opacity)?'inherit':'hidden';
+			me._right_top_corner_panel_ph.ggVisible=true;
+			me._right_bottom_corner_panel_ph.style.transition='none';
+			me._right_bottom_corner_panel_ph.style.visibility=(Number(me._right_bottom_corner_panel_ph.style.opacity)>0||!me._right_bottom_corner_panel_ph.style.opacity)?'inherit':'hidden';
+			me._right_bottom_corner_panel_ph.ggVisible=true;
+		}
+		me._pp_outside_close_ph_port.ggUpdatePosition=function (useTransition) {
+		}
+		me._productpanel_wolf_ph_port.appendChild(me._pp_outside_close_ph_port);
+		me._wolfrange_ph_landscape.appendChild(me._productpanel_wolf_ph_port);
+		el=me._text_tooltip_visit_site_ph_port=document.createElement('div');
+		els=me._text_tooltip_visit_site_ph_port__text=document.createElement('div');
+		el.className='ggskin ggskin_textdiv';
+		el.ggTextDiv=els;
+		el.ggId="text_tooltip_Visit_site_PH_Port";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_text tooltip";
@@ -14689,7 +15642,7 @@ function pano2vrSkin(player,base) {
 		hs+='overflow: hidden;';
 		hs+='overflow-y: auto;';
 		els.setAttribute('style',hs);
-		me._text_tooltip_visit_site_ph.ggUpdateText=function() {
+		me._text_tooltip_visit_site_ph_port.ggUpdateText=function() {
 			var params = [];
 			var hs = player._("Visit site\n", params);
 			if (hs!=this.ggText) {
@@ -14698,9 +15651,9 @@ function pano2vrSkin(player,base) {
 				if (this.ggUpdatePosition) this.ggUpdatePosition();
 			}
 		}
-		me._text_tooltip_visit_site_ph.ggUpdateText();
+		me._text_tooltip_visit_site_ph_port.ggUpdateText();
 		el.appendChild(els);
-		me._text_tooltip_visit_site_ph.ggIsActive=function() {
+		me._text_tooltip_visit_site_ph_port.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -14712,10 +15665,10 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
-		me._text_tooltip_visit_site_ph.ggUpdatePosition=function (useTransition) {
+		me._text_tooltip_visit_site_ph_port.ggUpdatePosition=function (useTransition) {
 		}
-		me._wolfrange_ph.appendChild(me._text_tooltip_visit_site_ph);
-		me._product_information_ph.appendChild(me._wolfrange_ph);
+		me._wolfrange_ph_landscape.appendChild(me._text_tooltip_visit_site_ph_port);
+		me._product_information_ph.appendChild(me._wolfrange_ph_landscape);
 		me._mobile_ph.appendChild(me._product_information_ph);
 		me._mobile.appendChild(me._mobile_ph);
 		me.divSkin.appendChild(me._mobile);
@@ -28557,6 +29510,9 @@ function pano2vrSkin(player,base) {
 		me.__3rd_floornames_ph.logicBlock_position();
 		me.__3rd_floornames_ph.logicBlock_visible();
 		me._fp_screen_blur_ph.logicBlock_size();
+		me._productpanel_wolf_ph_land.logicBlock_visible();
+		me._productpanel_wolf_ph_port.logicBlock_visible();
+		me._pp_close_b_ph_port.logicBlock_position();
 		me._tab.logicBlock_visible();
 		me._text_1_1_1.logicBlock_text();
 		me._desktop.logicBlock_visible();
@@ -29146,6 +30102,9 @@ function pano2vrSkin(player,base) {
 			me.__3rd_floornames_ph.logicBlock_position();
 			me.__3rd_floornames_ph.logicBlock_visible();
 			me._fp_screen_blur_ph.logicBlock_size();
+			me._productpanel_wolf_ph_land.logicBlock_visible();
+			me._productpanel_wolf_ph_port.logicBlock_visible();
+			me._pp_close_b_ph_port.logicBlock_position();
 			me._tab.logicBlock_visible();
 			me._text_1_1_1.logicBlock_text();
 			me._desktop.logicBlock_visible();
@@ -29412,7 +30371,11 @@ function pano2vrSkin(player,base) {
 			me.__2nd_floornames_ph.logicBlock_position();
 			me.__3rd_floornames_ph.logicBlock_position();
 			me._fp_screen_blur_ph.logicBlock_size();
-			me._info_scroll_area_ph.ggUpdatePosition();
+			me._productpanel_wolf_ph_land.logicBlock_visible();
+			me._info_scroll_area_ph_land.ggUpdatePosition();
+			me._productpanel_wolf_ph_port.logicBlock_visible();
+			me._info_scroll_area_ph_port.ggUpdatePosition();
+			me._pp_close_b_ph_port.logicBlock_position();
 			me._tab.logicBlock_visible();
 			me._text_1_1_1.logicBlock_text();
 			me._desktop.logicBlock_visible();
@@ -29667,6 +30630,9 @@ function pano2vrSkin(player,base) {
 			me.__2nd_floornames_ph.logicBlock_position();
 			me.__3rd_floornames_ph.logicBlock_position();
 			me._fp_screen_blur_ph.logicBlock_size();
+			me._productpanel_wolf_ph_land.logicBlock_visible();
+			me._productpanel_wolf_ph_port.logicBlock_visible();
+			me._pp_close_b_ph_port.logicBlock_position();
 		});
 		player.addListener('varchanged_Mobile_P', function(event) {
 			me._mobile.logicBlock_visible();
@@ -29686,6 +30652,8 @@ function pano2vrSkin(player,base) {
 			me.__2nd_floornames_ph.logicBlock_position();
 			me.__3rd_floornames_ph.logicBlock_position();
 			me._fp_screen_blur_ph.logicBlock_size();
+			me._productpanel_wolf_ph_land.logicBlock_visible();
+			me._productpanel_wolf_ph_port.logicBlock_visible();
 		});
 		player.addListener('varchanged_Potrait', function(event) {
 			me._variable_Mobile_P.logicBlock();
@@ -30560,7 +31528,7 @@ function pano2vrSkin(player,base) {
 		}
 		me._wolfcrange_info_ph.ggUpdatePosition=function (useTransition) {
 		}
-		el=me._line_ph0=document.createElement('div');
+		el=me._line_ph=document.createElement('div');
 		el.ggId="line_PH";
 		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -30579,7 +31547,7 @@ function pano2vrSkin(player,base) {
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
-		me._line_ph0.ggIsActive=function() {
+		me._line_ph.ggIsActive=function() {
 			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 				return this.parentNode.ggIsActive();
 			}
@@ -30591,15 +31559,15 @@ function pano2vrSkin(player,base) {
 			}
 			return me.ggNodeId;
 		}
-		me._line_ph0.onmouseenter=function (e) {
-			me.elementMouseOver['line_ph0']=true;
+		me._line_ph.onmouseenter=function (e) {
+			me.elementMouseOver['line_ph']=true;
 			me._product_info_b_ph.logicBlock_scaling();
 		}
-		me._line_ph0.onmouseleave=function (e) {
-			me.elementMouseOver['line_ph0']=false;
+		me._line_ph.onmouseleave=function (e) {
+			me.elementMouseOver['line_ph']=false;
 			me._product_info_b_ph.logicBlock_scaling();
 		}
-		me._line_ph0.ggUpdatePosition=function (useTransition) {
+		me._line_ph.ggUpdatePosition=function (useTransition) {
 		}
 		el=me._product_info_b_ph=document.createElement('div');
 		els=me._product_info_b_ph__img=document.createElement('img');
@@ -30646,7 +31614,7 @@ function pano2vrSkin(player,base) {
 		me._product_info_b_ph.logicBlock_scaling = function() {
 			var newLogicStateScaling;
 			if (
-				((me.elementMouseOver['line_ph0'] == true))
+				((me.elementMouseOver['line_ph'] == true))
 			)
 			{
 				newLogicStateScaling = 0;
@@ -30674,12 +31642,19 @@ function pano2vrSkin(player,base) {
 		me._product_info_b_ph.logicBlock_scaling();
 		me._product_info_b_ph.onclick=function (e) {
 			if (player.transitionsDisabled) {
-				skin._productpanel_wolf_ph.style.transition='none';
+				skin._productpanel_wolf_ph_land.style.transition='none';
 			} else {
-				skin._productpanel_wolf_ph.style.transition='all 500ms ease-out 0ms';
+				skin._productpanel_wolf_ph_land.style.transition='all 500ms ease-out 0ms';
 			}
-			skin._productpanel_wolf_ph.style.opacity='1';
-			skin._productpanel_wolf_ph.style.visibility=skin._productpanel_wolf_ph.ggVisible?'inherit':'hidden';
+			skin._productpanel_wolf_ph_land.style.opacity='1';
+			skin._productpanel_wolf_ph_land.style.visibility=skin._productpanel_wolf_ph_land.ggVisible?'inherit':'hidden';
+			if (player.transitionsDisabled) {
+				skin._productpanel_wolf_ph_port.style.transition='none';
+			} else {
+				skin._productpanel_wolf_ph_port.style.transition='all 500ms ease-out 0ms';
+			}
+			skin._productpanel_wolf_ph_port.style.opacity='1';
+			skin._productpanel_wolf_ph_port.style.visibility=skin._productpanel_wolf_ph_port.ggVisible?'inherit':'hidden';
 			if (player.transitionsDisabled) {
 				skin._screen_blur_ph.style.transition='none';
 			} else {
@@ -30700,10 +31675,10 @@ function pano2vrSkin(player,base) {
 		}
 		me._product_info_b_ph.ggUpdatePosition=function (useTransition) {
 		}
-		me._line_ph0.appendChild(me._product_info_b_ph);
-		me._wolfcrange_info_ph.appendChild(me._line_ph0);
+		me._line_ph.appendChild(me._product_info_b_ph);
+		me._wolfcrange_info_ph.appendChild(me._line_ph);
 		me.elementMouseOver['wolfcrange_info_ph']=false;
-		me.elementMouseOver['line_ph0']=false;
+		me.elementMouseOver['line_ph']=false;
 		me._product_info_b_ph.logicBlock_scaling();
 		me.ggUse3d=true;
 		me.gg3dDistance=1000;
@@ -36891,12 +37866,12 @@ me._map_pin_active.style.transform=hs; });
 		me._floor_indication_b_ph.ggUpdateConditionTimer();
 		me._sr_close_b_ph.ggUpdateConditionTimer();
 		var hs='';
-		if (me._text_tooltip_visit_site_ph.ggParameter) {
-			hs+=parameterToTransform(me._text_tooltip_visit_site_ph.ggParameter) + ' ';
+		if (me._text_tooltip_visit_site_ph_port.ggParameter) {
+			hs+=parameterToTransform(me._text_tooltip_visit_site_ph_port.ggParameter) + ' ';
 		}
 		hs+='translate(' + (1 * player.mouse.x + 0) + 'px,0px) ';
 		hs+='translate(0px,' + (1 * player.mouse.y + 0) + 'px) ';
-		me._text_tooltip_visit_site_ph.style.transform=hs;
+		me._text_tooltip_visit_site_ph_port.style.transform=hs;
 		me._minimap_blur.ggUpdateConditionTimer();
 		me._floors_b.ggUpdateConditionTimer();
 		me._floor_indication_b.ggUpdateConditionTimer();
