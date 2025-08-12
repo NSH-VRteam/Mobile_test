@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: NSH-UI auto resolution.ggsk
-// Generated 2025-08-11T20:57:53
+// Generated 2025-08-12T13:44:23
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -23,6 +23,7 @@ function pano2vrSkin(player,base) {
 	player.addVariable('Tab_P', 2, false, { ignoreInState: 1  });
 	player.addVariable('Tab_L', 2, false, { ignoreInState: 1  });
 	player.addVariable('Desktop', 2, false, { ignoreInState: 1  });
+	player.addVariable('Room_Visibility', 2, false, { ignoreInState: 1  });
 	var me=this;
 	var skin=this;
 	var flag=false;
@@ -345,6 +346,42 @@ function pano2vrSkin(player,base) {
 				}
 			}
 		}
+		me._variable_Room_Visibility = {};
+		me._variable_Room_Visibility.ggCurrentLogicState = -1;
+		me._variable_Room_Visibility.logicBlock = function() {
+			var newLogicState_Room_Visibility;
+			if (
+				((player.getVariableValue('Room_visibility_1F') == true)) || 
+				((player.getVariableValue('Room_visibility_2F') == true)) || 
+				((player.getVariableValue('Room_visibility_3F') == true))
+			)
+			{
+				newLogicState_Room_Visibility = 0;
+			}
+			else if (
+				((player.getVariableValue('Room_visibility_1F') == false)) || 
+				((player.getVariableValue('Room_visibility_2F') == false)) || 
+				((player.getVariableValue('Room_visibility_3F') == false))
+			)
+			{
+				newLogicState_Room_Visibility = 1;
+			}
+			else {
+				newLogicState_Room_Visibility = -1;
+			}
+			if (me._variable_Room_Visibility.ggCurrentLogicState != newLogicState_Room_Visibility) {
+				me._variable_Room_Visibility.ggCurrentLogicState = newLogicState_Room_Visibility;
+				if (me._variable_Room_Visibility.ggCurrentLogicState == 0) {
+					player.setVariableValue('Room_Visibility', true);
+				}
+				else if (me._variable_Room_Visibility.ggCurrentLogicState == 1) {
+					player.setVariableValue('Room_Visibility', false);
+				}
+				else {
+					player.setVariableValue('Room_Visibility', false);
+				}
+			}
+		}
 		el=me._mobile=document.createElement('div');
 		el.ggId="Mobile";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
@@ -371,14 +408,18 @@ function pano2vrSkin(player,base) {
 			var newLogicStateVisible;
 			if (
 				((player.getVariableValue('Mobile_P') == true)) || 
-				((player.getVariableValue('Mobile_L') == true))
+				((player.getVariableValue('Mobile_L') == true)) || 
+				((player.getVariableValue('Tab_P') == true)) || 
+				((player.getVariableValue('Tab_L') == true))
 			)
 			{
 				newLogicStateVisible = 0;
 			}
 			else if (
 				((player.getVariableValue('Mobile_P') == false)) || 
-				((player.getVariableValue('Mobile_L') == false))
+				((player.getVariableValue('Mobile_L') == false)) || 
+				((player.getVariableValue('Tab_P') == true)) || 
+				((player.getVariableValue('Tab_L') == true))
 			)
 			{
 				newLogicStateVisible = 1;
@@ -5518,7 +5559,13 @@ function pano2vrSkin(player,base) {
 			return player.getCurrentNode();
 		}
 		me._floor_tx_03_ph.onclick=function (e) {
-			player.openNext("{node46}","");
+			if (
+				(
+					((player.getVariableValue('Floor_Visibility') == true))
+				)
+			) {
+				player.openNext("{node46}","");
+			}
 		}
 		me._floor_tx_03_ph.ggUpdatePosition=function (useTransition) {
 		}
@@ -5588,7 +5635,13 @@ function pano2vrSkin(player,base) {
 			return player.getCurrentNode();
 		}
 		me._floor_tx_02_ph.onclick=function (e) {
-			player.openNext("{node23}","");
+			if (
+				(
+					((player.getVariableValue('Floor_Visibility') == true))
+				)
+			) {
+				player.openNext("{node23}","");
+			}
 		}
 		me._floor_tx_02_ph.ggUpdatePosition=function (useTransition) {
 		}
@@ -6572,24 +6625,40 @@ function pano2vrSkin(player,base) {
 				newLogicStatePosition = 0;
 			}
 			else if (
+				((player.getVariableValue('Minimap_hide') == false)) && 
+				((player.getVariableValue('Room_Visibility') == true))
+			)
+			{
+				newLogicStatePosition = 1;
+			}
+			else if (
+				((player.getVariableValue('Room_Visibility') == true)) && 
+				((player.getVariableValue('Minimap_hide') == true))
+			)
+			{
+				newLogicStatePosition = 2;
+			}
+			else if (
 				((player.getVariableValue('Room_visibility_1F') == true)) || 
 				((player.getVariableValue('Room_visibility_2F') == true)) || 
 				((player.getVariableValue('Room_visibility_3F') == true)) || 
 				((player.getVariableValue('Floor_Visibility') == true)) && 
+				((player.getVariableValue('Minimap_hide') == false)) && 
 				((player.getVariableValue('Mobile_L') == true))
 			)
 			{
-				newLogicStatePosition = 1;
+				newLogicStatePosition = 3;
 			}
 			else if (
 				((player.getVariableValue('Room_visibility_1F') == false)) || 
 				((player.getVariableValue('Room_visibility_2F') == false)) || 
 				((player.getVariableValue('Room_visibility_3F') == false)) || 
 				((player.getVariableValue('Floor_Visibility') == false)) && 
+				((player.getVariableValue('Minimap_hide') == true)) && 
 				((player.getVariableValue('Mobile_L') == true))
 			)
 			{
-				newLogicStatePosition = 2;
+				newLogicStatePosition = 4;
 			}
 			else {
 				newLogicStatePosition = -1;
@@ -6606,6 +6675,14 @@ function pano2vrSkin(player,base) {
 					me._right_bottom_corner_panel_ph.style.bottom='-80px';
 				}
 				else if (me._right_bottom_corner_panel_ph.ggCurrentLogicStatePosition == 2) {
+					me._right_bottom_corner_panel_ph.style.right='0px';
+					me._right_bottom_corner_panel_ph.style.bottom='0px';
+				}
+				else if (me._right_bottom_corner_panel_ph.ggCurrentLogicStatePosition == 3) {
+					me._right_bottom_corner_panel_ph.style.right='0px';
+					me._right_bottom_corner_panel_ph.style.bottom='-80px';
+				}
+				else if (me._right_bottom_corner_panel_ph.ggCurrentLogicStatePosition == 4) {
 					me._right_bottom_corner_panel_ph.style.right='0px';
 					me._right_bottom_corner_panel_ph.style.bottom='0px';
 				}
@@ -8421,7 +8498,7 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='bottom : 0px;';
 		hs+='height : 11.1111%;';
-		hs+='left : -1px;';
+		hs+='left : 0px;';
 		hs+='position : absolute;';
 		hs+='visibility : hidden;';
 		hs+='width : 13.0208%;';
@@ -8449,24 +8526,40 @@ function pano2vrSkin(player,base) {
 				newLogicStatePosition = 0;
 			}
 			else if (
+				((player.getVariableValue('Minimap_hide') == false)) && 
+				((player.getVariableValue('Room_Visibility') == true))
+			)
+			{
+				newLogicStatePosition = 1;
+			}
+			else if (
+				((player.getVariableValue('Minimap_hide') == true)) && 
+				((player.getVariableValue('Room_Visibility') == true))
+			)
+			{
+				newLogicStatePosition = 2;
+			}
+			else if (
 				((player.getVariableValue('Room_visibility_1F') == true)) || 
 				((player.getVariableValue('Room_visibility_2F') == true)) || 
 				((player.getVariableValue('Room_visibility_3F') == true)) || 
 				((player.getVariableValue('Floor_Visibility') == true)) && 
+				((player.getVariableValue('Minimap_hide') == false)) && 
 				((player.getVariableValue('Mobile_L') == true))
 			)
 			{
-				newLogicStatePosition = 1;
+				newLogicStatePosition = 3;
 			}
 			else if (
 				((player.getVariableValue('Room_visibility_1F') == false)) || 
 				((player.getVariableValue('Room_visibility_2F') == false)) || 
 				((player.getVariableValue('Room_visibility_3F') == false)) || 
 				((player.getVariableValue('Floor_Visibility') == false)) && 
+				((player.getVariableValue('Minimap_hide') == true)) && 
 				((player.getVariableValue('Mobile_L') == true))
 			)
 			{
-				newLogicStatePosition = 2;
+				newLogicStatePosition = 4;
 			}
 			else {
 				newLogicStatePosition = -1;
@@ -8486,8 +8579,16 @@ function pano2vrSkin(player,base) {
 					me._left_bottom_corner_panel_ph.style.left='0px';
 					me._left_bottom_corner_panel_ph.style.bottom='0px';
 				}
+				else if (me._left_bottom_corner_panel_ph.ggCurrentLogicStatePosition == 3) {
+					me._left_bottom_corner_panel_ph.style.left='0px';
+					me._left_bottom_corner_panel_ph.style.bottom='-80px';
+				}
+				else if (me._left_bottom_corner_panel_ph.ggCurrentLogicStatePosition == 4) {
+					me._left_bottom_corner_panel_ph.style.left='0px';
+					me._left_bottom_corner_panel_ph.style.bottom='0px';
+				}
 				else {
-					me._left_bottom_corner_panel_ph.style.left='-1px';
+					me._left_bottom_corner_panel_ph.style.left='0px';
 					me._left_bottom_corner_panel_ph.style.bottom='0px';
 				}
 			}
@@ -12471,7 +12572,7 @@ function pano2vrSkin(player,base) {
 				}
 				else if (me._floorswitch_01_ph.ggCurrentLogicStatePosition == 1) {
 					me._floorswitch_01_ph.style.left = 'calc(50% - (150px / 2))';
-					me._floorswitch_01_ph.style.top = 'calc(50% - (26px / 2) - (0px / 2) + 240px)';
+					me._floorswitch_01_ph.style.top = 'calc(50% - (26px / 2) - (0px / 2) + 140px)';
 				}
 				else {
 					me._floorswitch_01_ph.style.left='calc(50% - ((150px + 0px) / 2) + 0px)';
@@ -28896,6 +28997,7 @@ function pano2vrSkin(player,base) {
 			me._variable_Mobile_L.logicBlock();
 			me._variable_Tab_P.logicBlock();
 			me._variable_Tab_L.logicBlock();
+			me._variable_Room_Visibility.logicBlock();
 			me._mobile.logicBlock_visible();
 			me._text_1.logicBlock_position();
 			me._text_1_1_1_1.logicBlock_text();
@@ -29226,6 +29328,7 @@ function pano2vrSkin(player,base) {
 			me._variable_Tab_P.logicBlock();
 			me._variable_Tab_L.logicBlock();
 			me._variable_Desktop.logicBlock();
+			me._variable_Room_Visibility.logicBlock();
 			me._mobile.logicBlock_visible();
 			me._text_1.logicBlock_position();
 			me._text_1_1_1_1.logicBlock_text();
@@ -29538,6 +29641,8 @@ function pano2vrSkin(player,base) {
 			me._floorplan_b_ph.logicBlock_position();
 			me._floors_b_ph.logicBlock_position();
 			me._floor_indication_b_ph.logicBlock_position();
+			me._right_bottom_corner_panel_ph.logicBlock_position();
+			me._left_bottom_corner_panel_ph.logicBlock_position();
 		});
 		player.addListener('varchanged_Mobile_L', function(event) {
 			me._mobile.logicBlock_visible();
@@ -29588,7 +29693,12 @@ function pano2vrSkin(player,base) {
 			me._variable_Tab_P.logicBlock();
 			me._variable_Tab_L.logicBlock();
 		});
+		player.addListener('varchanged_Room_Visibility', function(event) {
+			me._right_bottom_corner_panel_ph.logicBlock_position();
+			me._left_bottom_corner_panel_ph.logicBlock_position();
+		});
 		player.addListener('varchanged_Room_visibility_1F', function(event) {
+			me._variable_Room_Visibility.logicBlock();
 			me._scrollarea_1f_ph.logicBlock_position();
 			me._scrollarea_1f_ph.logicBlock_alpha();
 			me._room_panel_1f_ph.logicBlock_position();
@@ -29611,6 +29721,7 @@ function pano2vrSkin(player,base) {
 			me._rooms_blur_bg.logicBlock_alpha();
 		});
 		player.addListener('varchanged_Room_visibility_2F', function(event) {
+			me._variable_Room_Visibility.logicBlock();
 			me._scrollarea_2f_ph.logicBlock_position();
 			me._scrollarea_2f_ph.logicBlock_alpha();
 			me._room_panel_2f_ph.logicBlock_position();
@@ -29633,6 +29744,7 @@ function pano2vrSkin(player,base) {
 			me._rooms_blur_bg.logicBlock_alpha();
 		});
 		player.addListener('varchanged_Room_visibility_3F', function(event) {
+			me._variable_Room_Visibility.logicBlock();
 			me._scrollarea_3f_ph.logicBlock_position();
 			me._scrollarea_3f_ph.logicBlock_alpha();
 			me._room_panel_3f_ph.logicBlock_position();
@@ -29683,10 +29795,12 @@ function pano2vrSkin(player,base) {
 			me._switch_01.logicBlock_alpha();
 		});
 		player.addListener('varchanged_Tab_L', function(event) {
+			me._mobile.logicBlock_visible();
 			me._tab.logicBlock_visible();
 			me._text_1_1_1.logicBlock_text();
 		});
 		player.addListener('varchanged_Tab_P', function(event) {
+			me._mobile.logicBlock_visible();
 			me._tab.logicBlock_visible();
 			me._text_1_1_1.logicBlock_text();
 		});
