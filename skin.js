@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.8/20986
 // Filename: NSH-UI auto resolution 02.ggsk
-// Generated 2025-08-20T15:30:26
+// Generated 2025-08-20T15:44:30
 
 function pano2vrSkin(player,base) {
 	player.addVariable('Room_visibility_1F', 2, false, { ignoreInState: 0  });
@@ -29798,7 +29798,7 @@ var aspect = w / h;
 if (w < 680 || h < 500) {
 player.setVariableValue("ui_mode","mobile");
 // Tablet detection: mid-size screens, hiDPI, not too narrow
-} else if (w >= 680 && w <= 1400 && dpr >= 2 && aspect < 2) {
+} else if (w >= 680 && w <= 1400 && dpr >= 1.5 && aspect < 2) {
 player.setVariableValue("ui_mode","tablet");
 // Everything else → desktop
 } else {
